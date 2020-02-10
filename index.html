@@ -1,10 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Currency Exchange</title>
+
+  <!-- Semantic UI stylesheet link -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+  <!-- Reset file that erases all different browser default HTML -->
+  <link rel="stylesheet" href="assets/reset.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+
+  <!-- Linking CSS file to this HTML -->
+  <link rel="stylesheet" href="assets/style.css">
+
 </head>
+
 <body>
-  This is our file
-  Make something happen
+
+
+  <!-- Initial modal that appears on page load -->
+  <div id="nativeCurrencyModal" class="ui modal">
+    <h1>What is your native currency?</h1>
+
+    <!-- Buttons to choose native currency in initial modal -->
+    <div id="nativeCurrencyUSDollar" class="ui button">American Dollar</div>
+    <div id="nativeCurrencyPound" class="ui button">Pound</div>
+    <div id="nativeCurrencyPeso" class="ui button">Peso</div>
+
+  </div>
+
+  <!-- Primary container that houses all main page elements -->
+  <div class="ui container">
+    <!-- Grid system which also center aligns column contents -->
+    <div class="ui middle aligned grid">
+
+      <!-- Most top page-wide column, curently empty -->
+      <div class="sixteen wide column"></div>
+
+
+
+      <!-- Column that houses native currency display and button to initiate initial modal again, to change native currency -->
+      <div class="four wide column">
+        <h2>Native Currency</h2>
+        <br>
+        <div id="changeNativeCurrency" class="ui button">American Dollar</div>
+      </div>
+
+      <!-- COlumn that houses space between primary currency buttons, as well as a potential arrow icon -->
+      <div class="eight wide column">
+        <div class="arrowIcon">
+          <i class="arrow right icon"></i>
+        </div>
+      </div>
+
+      <!-- Column that houses a drop down menu with all available countries, should the user choose to locate the desired currency via country versus currency symbol -->
+      <div class="four wide column">
+        <h2>Select by Country</h2>
+        <br>
+        <div class="ui button floating dropdown labeled icon">
+          <i class="world icon"></i>
+          <span class="text">United States</span>
+          <div class="menu">
+            <div id="convertedCurrencyUSDollar" class="item">United States</div>
+            <div id="convertedCurrencyPound" class="item">England</div>
+            <div id="convertedCurrencyPeso" class="item">Mexico</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UI Grid closing Div -->
+    </div>
+
+
+    <!-- Column that houses the large converted currency icon buttons, upon clicking these should prompt the secondary modal -->
+    <div class="sixteen wide column">
+      <div id="icons">
+        <i class="world icon"></i>
+        <i class="world icon"></i>
+        <i class="world icon"></i>
+        <i class="world icon"></i>
+      </div>
+    </div>
+
+    <!-- UI Container closing Div -->
+  </div>
+
+  <!-- Semantic UI JavaScript file, these functions are required in order to call the desired component -->
+  <script src="javascript/ui.js"></script>
+
 </body>
+
+</html>
