@@ -7,15 +7,14 @@ h1 {
   font-size: 50px;
   text-align: center;
   font-family: 'Abel', sans-serif;
-  padding: 0;
-  margin: 0;
+  padding: 20px;
 }
 
 h2 {
   font-family: 'Abel', sans-serif;
   font-weight: lighter;
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 #icons {
@@ -25,6 +24,7 @@ h2 {
 
 .ui.button {
   font-family: 'Abel', sans-serif;
+  font-size: 20px;
   display: flex;
   justify-content: center;
   margin: 0;
@@ -38,4 +38,19 @@ h2 {
 .arrowIcon {
   display: flex;
   justify-content: center;
+}
+
+.ui.modal {
+  background-color: rgb(168, 168, 168);
+}
+
+.currencyIcon {
+  border-radius: 100px;
+  height: 200px;
+  width: 200px;
+  font-size: 150px;
+  font-family: 'Abel', sans-serif;
+  margin: 30px;
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255),  rgb(121, 148, 184));
+  outline: none;
 }
