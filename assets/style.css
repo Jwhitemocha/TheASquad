@@ -47,6 +47,8 @@ h2 {
   font-size: 150px;
   font-family: 'Abel', sans-serif;
   margin: 30px;
-  background-image: linear-gradient(to bottom right, rgb(255, 255, 255),  rgb(121, 148, 184));
+  background-image: linear-gradient(to bottom right, rgb(255, 183, 116),  rgb(63, 50, 33));
   outline: none;
+  color: white;
+  border: none;
 }
