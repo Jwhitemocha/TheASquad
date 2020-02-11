@@ -10,11 +10,19 @@ $('#displayNative').click(function(){
 });
 
 // Changes native currency to Euro
-$(`#nativeBtn-${nativeCurrency}`).click(function(){
-  $('#displayNative').text(nativeCurrency);
-  $('#nativeModal').modal('hide');
-  rateExchange();
-});
+nativeButton('USD');
+nativeButton('EUR');
+nativeButton('GBP');
+nativeButton('JPY');
+
+function nativeButton(currency){
+  $(`#nativeBtn-${currency}`).click(function(){
+    nativeCurrency = currency;
+    $('#displayNative').text(nativeCurrency);
+    $('#nativeModal').modal('hide');
+    rateExchange();
+  });
+}
 
 // Changes coverted currency to Euro
 $(`#convertedList-EUR`).click(function(){
