@@ -1,3 +1,8 @@
+html {
+  font-family: 'Abel', sans-serif;
+  font-size: 30px;
+}
+
 body {
   background-image: linear-gradient(to bottom right, rgb(121, 148, 184), rgb(20, 21, 22));
   font-family: 'Abel', sans-serif;
