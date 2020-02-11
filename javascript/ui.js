@@ -1,5 +1,6 @@
+let nativeCurrency = 'USD';
 $('.ui.dropdown')
-  .dropdown();
+.dropdown();
 
   $('#nativeCurrencyModal')
   .modal('show')
@@ -7,9 +8,8 @@ $('.ui.dropdown')
 
 // Clicking on native currency pops initial modal back up
 $('#changeNativeCurrency').click(function(){
-  $('#nativeCurrencyModal').modal('show');    
+  $('#nativeCurrencyModal').modal('show');
 });
-
 
 // Changes native currency to Euro
 $('#nativeCurrencyEuro').click(function(){
