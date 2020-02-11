@@ -19,3 +19,4 @@ $('#nativeCurrencyEuro').click(function(){
   .modal('hide')
 });
 
+// Change test
