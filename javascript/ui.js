@@ -20,13 +20,12 @@ function nativeButton(currency){
     nativeCurrency = currency;
     $('#displayNative').text(nativeCurrency);
     $('#nativeModal').modal('hide');
-    rateExchange();
   });
 }
 
 // Changes coverted currency to Euro
-$(`#convertedList-EUR`).click(function(){
-  $('#convertedModal').modal('show')
+$(`.item`).click(function(){
+  rateExchange();
 });
 
 // Getting the Exchange Rate API
@@ -37,5 +36,6 @@ function rateExchange(){
     method: "GET"
   }).then(function(response){
     console.log(response);
+    $('#convertedModal').modal('show');
   })
 }
