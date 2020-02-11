@@ -1,27 +1,24 @@
 let nativeCurrency = 'USD';
-$('.ui.dropdown')
-.dropdown();
 
-  $('#nativeCurrencyModal').modal('show')
+$('.ui.dropdown').dropdown();
 
+$('#nativeModal').modal('show')
 
 // Clicking on native currency pops initial modal back up
-$('#changeNativeCurrency').click(function(){
-  $('#nativeCurrencyModal').modal('show');
+$('#displayNative').click(function(){
+  $('#nativeModal').modal('show');
 });
 
 // Changes native currency to Euro
-$(`#nativeCurrencyEuro`).click(function(){
-  nativeCurrency = "EUR";
-  $('#changeNativeCurrency').text(nativeCurrency);
-  $('#nativeCurrencyModal').modal('hide');
+$(`#nativeBtn-${nativeCurrency}`).click(function(){
+  $('#displayNative').text(nativeCurrency);
+  $('#nativeModal').modal('hide');
   rateExchange();
 });
 
 // Changes coverted currency to Euro
-$('#convertedCurrencyEuro').click(function(){
-  $('#convertedCurrency').text("Euro")
-  $('#convertedCurrencyModal').modal('show')
+$(`#convertedList-EUR`).click(function(){
+  $('#convertedModal').modal('show')
 });
 
 // Getting the Exchange Rate API
