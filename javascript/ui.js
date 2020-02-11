@@ -1,9 +1,8 @@
 $('.ui.dropdown')
   .dropdown();
 
-  $('.ui.modal')
+  $('#nativeCurrencyModal')
   .modal('show')
-
 
 
 // Clicking on native currency pops initial modal back up
@@ -15,8 +14,13 @@ $('#changeNativeCurrency').click(function(){
 // Changes native currency to Euro
 $('#nativeCurrencyEuro').click(function(){
   $('#changeNativeCurrency').text("Euro")
-  $('.ui.modal')
+  $('#nativeCurrencyModal')
   .modal('hide')
 });
 
-// Change test
+// Changes native currency to Euro
+$('#convertedCurrencyEuro').click(function(){
+  $('#convertedCurrency').text("Euro")
+  $('#convertedCurrencyModal')
+  .modal('show')
+});
