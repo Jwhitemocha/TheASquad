@@ -1,0 +1,61 @@
+body {
+  background-image: linear-gradient(to bottom right, rgb(121, 148, 184), rgb(20, 21, 22));
+  font-family: 'Abel', sans-serif;
+}
+
+h1 {
+  font-size: 80px;
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  color: white;
+}
+
+h2 {
+  font-family: 'Abel', sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+h3 {
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  padding: 20px;
+}
+
+#icons {
+  text-align: center;
+  margin: 0;
+}
+
+.ui.button {
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-color: white;
+}
+
+.ui.container {
+  margin: 30px;
+}
+
+.ui.modal {
+  background-color: rgb(168, 168, 168);
+}
+
+.currencyIcon {
+  border-radius: 100px;
+  height: 200px;
+  width: 200px;
+  font-size: 150px;
+  font-family: 'Abel', sans-serif;
+  margin: 30px;
+  background-image: linear-gradient(to bottom right, rgb(255, 183, 116),  rgb(63, 50, 33));
+  outline: none;
+  color: white;
+  border: none;
+}
