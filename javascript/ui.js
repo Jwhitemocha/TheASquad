@@ -11,19 +11,12 @@ $('#displayNative').click(function(){
   $('#nativeModal').modal('show');
 });
 
-// Changes native currency to Euro
-nativeButton('USD');
-nativeButton('EUR');
-nativeButton('GBP');
-nativeButton('JPY');
-
-function nativeButton(currency){
-  $(`#nativeBtn-${currency}`).click(function(){
-    nativeCurrency = currency;
-    $('#displayNative').text(nativeCurrency);
-    $('#nativeModal').modal('hide');
-  });
-}
+// Changes native currency
+$('.nativeBtn').click(function(){
+  nativeCurrency = $(this).attr('id').slice(-3);
+  $('#displayNative').text(nativeCurrency);
+  $('#nativeModal').modal('hide');
+})
 
 // Changes coverted currency to Euro
 $(`.item`).click(function(){
@@ -31,7 +24,10 @@ $(`.item`).click(function(){
   rateExchange();
 });
 
-
+$('.currencyIcon').click(function(){
+  convertedCurrency = $(this).attr('id').slice(-3);
+  rateExchange();
+})
 
 // Getting the Exchange Rate API
 function rateExchange(){
