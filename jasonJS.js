@@ -14,16 +14,19 @@ $(".item").click(function() {
     url: helloUrl,
     method: 'GET'
     }).then(function(response) { 
+        
+// Displaying 'Hello' based on Country Clicked 
+
+    $('#displayConverted').text(JSON.stringify(response.hello));
+
     console.log(helloUrl);
     console.log(response.hello);
     });
 
 // Displaying 'Hello' based on Country Clicked 
 
-    $('#displayConverted').text(JSON.stringify(response));
     
 });
-
 
 
 
