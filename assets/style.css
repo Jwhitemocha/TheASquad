@@ -1,6 +1,6 @@
 html {
   font-family: 'Abel', sans-serif;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 body {
@@ -37,7 +37,7 @@ h3 {
 
 .ui.button {
   font-family: 'Abel', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   display: flex;
   justify-content: center;
   margin: 0;
@@ -71,6 +71,8 @@ input {
   border: none;
   outline: none;
   padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 input:hover {
@@ -80,4 +82,9 @@ input:hover {
 #exchangeRate, #customConversion, #previousRate {
   display: flex;
   justify-content: center;
+}
+
+span {
+  margin-left: 20px;
+  margin-right: 20px;
 }
