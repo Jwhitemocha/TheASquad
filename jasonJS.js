@@ -1,36 +1,24 @@
 // Getting helloSalut API 
 
-//var languageCode = [
- //   "en", //english
-  //  "fr", //french
-  //  "ja", //japanese
-  //  "es", //spanish
-  //  "de", //german
-// ]
+var languageCode 
 
-//Getting Country Class via click function **note Alert is just to test**
-$(".fr").click(function() { 
-    alert('France Was Clicked');
-});
-$(".en").click(function() { 
-    alert('USA was clicked');
-});
-$(".ja").click(function() { 
-    alert('JAPAN was clicked');
-});
-$(".en-gb").click(function() { 
-    alert('England was clicked');
-});
+// Function to change to proper languageCode based on country clicked
+$(".item").click(function() { 
 
-var languageCode = $(".item").click(function();
+    languageCode = $(this).attr('class').split(" ")[0]
 
-var helloUrl = "https://fourtonfish.com/hellosalut/?lang=" + languageCode; 
+    console.log(languageCode);
+    var helloUrl = "https://fourtonfish.com/hellosalut/?lang=" + languageCode; 
 
-$.ajax({
+    $.ajax({
     url: helloUrl,
     method: 'GET'
-}).then(function(response) { 
+    }).then(function(response) { 
     console.log(helloUrl);
     console.log(response.hello);
+    });
+
+
 });
+
 
