@@ -67,4 +67,17 @@ h3 {
 
 input {
   width: 200px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+input:hover {
+  outline: none;
+}
+
+#exchangeRate, #customConversion, #previousRate {
+  display: flex;
+  justify-content: center;
 }
