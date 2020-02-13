@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 60px;
   text-align: center;
   font-family: 'Abel', sans-serif;
   color: white;
@@ -30,6 +30,15 @@ h3 {
   padding: 20px;
 }
 
+h4 {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 #icons {
   text-align: center;
   margin: 0;
@@ -37,19 +46,23 @@ h3 {
 
 .ui.button {
   font-family: 'Abel', sans-serif;
-  font-size: 25px;
+  font-size: 30px;
   display: flex;
   justify-content: center;
-  margin: 0;
+  margin: 20px;
+  margin-left: 150px;
+  margin-right: 150px;
   background-color: white;
 }
 
 .ui.container {
-  margin: 30px;
+  margin: 70px;
 }
 
 .ui.modal {
-  background-color: rgb(168, 168, 168);
+  background-color: rgb(204, 204, 204);
+  font-size: 40px;
+  font-family: 'Abel', sans-serif;
 }
 
 .currencyIcon {
@@ -73,6 +86,7 @@ input {
   padding: 10px;
   margin-left: 20px;
   margin-right: 20px;
+  font-family: 'Abel', sans-serif;
 }
 
 input:hover {
@@ -82,9 +96,16 @@ input:hover {
 #exchangeRate, #customConversion, #previousRate {
   display: flex;
   justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
-span {
-  margin-left: 20px;
-  margin-right: 20px;
+#convertBtn {
+  margin: auto;
+}
+
+.modalSpan {
+  padding-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }

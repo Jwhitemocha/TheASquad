@@ -39,32 +39,27 @@
     <!-- Grid system which also center aligns column contents -->
     <div class="ui middle aligned grid">
 
-      <!-- Most top page-wide column, curently empty -->
-      <div class="sixteen wide column"></div>
-
 
 
       <!-- Column that houses native currency display and button to initiate initial modal again, to change native currency -->
-      <div class="four wide column">
-        <h2>Native Currency</h2>
+      <div class="sixteen wide column">
+        <h1>Native Currency</h1>
         <br>
         <div id="displayNative" class="ui button">Select currency</div>
       </div>
 
-      <!-- Column that houses space between primary currency buttons, as well as a potential arrow icon -->
-      <div class="eight wide column"></div>
+
 
       <!-- Column that houses a drop down menu with all available countries, should the user choose to locate the desired currency via country versus currency symbol -->
-      <div class="four wide column">
-        <h2>Convert by Country</h2>
+      <div class="sixteen wide column">
+        <h1>Convert by Country</h1>
         <br>
-        <div class="ui button floating dropdown labeled icon">
-          <i class="world icon"></i>
+        <div class="ui button dropdown">
           <span class="text">Select Country</span>
           <div class="menu">
             <div id="convertedList-USD" class="en item">United States</div>
             <div id="convertedList-EUR" class="fr item">France</div>
-            <div id="convertedList-GBP" class="en item">England</div>
+            <div id="convertedList-GBP" class="en-gb item">England</div>
             <div id="convertedList-JPY" class="ja item">Japan</div>
           </div>
         </div>
@@ -76,7 +71,6 @@
       <!-- Column that houses the large converted currency icon buttons, upon clicking these should prompt the secondary modal -->
       <div class="sixteen wide column">
         <div id="icons">
-          <br><br>
           <h1>Convert by Currency</h1>
           <br>
           <button id="currencyBtn-USD" class="currencyIcon">$</button>
@@ -98,18 +92,24 @@
     <h3 id="displayConverted">Euro</h3>
 
     <div id="exchangeRate">
-      <span id="nativeRate"></span> => <span id="convertedRate"></span>
+      <span id="nativeRate" class="modalSpan">1</span>
+      <h4>=></h4>
+      <span id="convertedRate" class="modalSpan"></span>
     </div>
 
     <div id="customConversion">
-    <span id="nativeCurrency">USD</span>
-    <input input="number" id="checkNative">
-    = <span id="convertedCurrency">Euro</span>
-    <input input="number" id="checkConverted">
+      <span id="nativeCurrency" class="modalSpan">USD</span>
+      <input type="number" id="checkNative">
+      <h4>=</h4>
+      <span id="convertedCurrency" class="modalSpan">Euro</span>
+      <input type="number" id="checkConverted">
     </div>
+    <button id="convertBtn" class="ui button">Convert</button>
 
     <div id="previousRate">
-      <span id="nativeRate"></span> => <span id="convertedPreviousRate"></span>
+      <span id="nativeRate" class="modalSpan">1</span>
+      <h4>=></h4>
+      <span id="convertedPreviousRate" class="modalSpan">Last weeks rate</span>
     </div>
 
 
