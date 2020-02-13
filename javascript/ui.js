@@ -1,4 +1,5 @@
 let nativeCurrency = 'USD';
+let convertedCurrency;
 
 $('.ui.dropdown').dropdown();
 
@@ -25,6 +26,7 @@ function nativeButton(currency){
 
 // Changes coverted currency to Euro
 $(`.item`).click(function(){
+  convertedCurrency = $(this).attr('id').slice(-3);
   rateExchange();
 });
 
@@ -37,5 +39,7 @@ function rateExchange(){
   }).then(function(response){
     console.log(response);
     $('#convertedModal').modal('show');
+    $('#nativeCurrency').text(nativeCurrency);
+    $('#convertedCurrency').text(convertedCurrency);
   })
 }
