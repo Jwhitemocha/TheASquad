@@ -31,6 +31,8 @@ $(`.item`).click(function(){
   rateExchange();
 });
 
+
+
 // Getting the Exchange Rate API
 function rateExchange(){
   url = "https://api.ratesapi.io/api/latest?base=" + nativeCurrency;
@@ -42,7 +44,20 @@ function rateExchange(){
     $('#convertedModal').modal('show');
     $('#nativeCurrency').text(nativeCurrency);
     $('#convertedCurrency').text(convertedCurrency);
-    convertedRate = Math.round(response.rates[convertedCurrency] * 100) / 100
+    
+    convertedRate = roundedToTwoDec(response.rates[convertedCurrency])
+    if(nativeCurrency === convertedCurrency){
+      convertedRate = 1
+    }
     $('#convertedRate').text(convertedRate);
+
+    $('#convertBtn').click(function(){
+      let convertedInput = roundedToTwoDec($('#checkNative').val() * response.rates[convertedCurrency]);
+      $('#checkConverted').val(convertedInput);
+    })
   })
+}
+
+function roundedToTwoDec(number){
+  return Math.round(number * 100) / 100;
 }
