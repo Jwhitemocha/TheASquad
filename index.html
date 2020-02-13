@@ -64,7 +64,7 @@
           <div class="menu">
             <div id="convertedList-USD" class="en item">United States</div>
             <div id="convertedList-EUR" class="fr item">France</div>
-            <div id="convertedList-GBP" class="en item">England</div>
+            <div id="convertedList-GBP" class="en-gb item">England</div>
             <div id="convertedList-JPY" class="ja item">Japan</div>
           </div>
         </div>
@@ -98,18 +98,24 @@
     <h3 id="displayConverted">Euro</h3>
 
     <div id="exchangeRate">
-      <span id="nativeRate"></span> => <span id="convertedRate"></span>
+      <span id="nativeRate" class="modalSpan">1</span>
+      <h4>=></h4>
+      <span id="convertedRate" class="modalSpan"></span>
     </div>
 
     <div id="customConversion">
-    <span id="nativeCurrency">USD</span>
+    <span id="nativeCurrency" class="modalSpan">USD</span>
     <input input="number" id="checkNative">
-    = <span id="convertedCurrency">Euro</span>
+    <h4>=</h4>
+    <span id="convertedCurrency" class="modalSpan">Euro</span>
     <input input="number" id="checkConverted">
     </div>
+    <button id="convertBtn" class="ui button">Convert</button>
 
     <div id="previousRate">
-      <span id="nativeRate"></span> => <span id="convertedPreviousRate"></span>
+      <span id="nativeRate" class="modalSpan">1</span>
+      <h4>=></h4>
+      <span id="convertedPreviousRate" class="modalSpan">Last weeks rate</span>
     </div>
 
 
