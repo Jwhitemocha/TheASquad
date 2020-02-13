@@ -39,27 +39,22 @@
     <!-- Grid system which also center aligns column contents -->
     <div class="ui middle aligned grid">
 
-      <!-- Most top page-wide column, curently empty -->
-      <div class="sixteen wide column"></div>
-
 
 
       <!-- Column that houses native currency display and button to initiate initial modal again, to change native currency -->
-      <div class="four wide column">
-        <h2>Native Currency</h2>
+      <div class="sixteen wide column">
+        <h1>Native Currency</h1>
         <br>
         <div id="displayNative" class="ui button">Select currency</div>
       </div>
 
-      <!-- Column that houses space between primary currency buttons, as well as a potential arrow icon -->
-      <div class="eight wide column"></div>
+
 
       <!-- Column that houses a drop down menu with all available countries, should the user choose to locate the desired currency via country versus currency symbol -->
-      <div class="four wide column">
-        <h2>Convert by Country</h2>
+      <div class="sixteen wide column">
+        <h1>Convert by Country</h1>
         <br>
-        <div class="ui button floating dropdown labeled icon">
-          <i class="world icon"></i>
+        <div class="ui button dropdown">
           <span class="text">Select Country</span>
           <div class="menu">
             <div id="convertedList-USD" class="en item">United States</div>
@@ -76,7 +71,6 @@
       <!-- Column that houses the large converted currency icon buttons, upon clicking these should prompt the secondary modal -->
       <div class="sixteen wide column">
         <div id="icons">
-          <br><br>
           <h1>Convert by Currency</h1>
           <br>
           <button id="currencyBtn-USD" class="currencyIcon">$</button>
