@@ -1,5 +1,6 @@
 let nativeCurrency = 'USD';
 let convertedCurrency;
+let convertedRate;
 
 $('.ui.dropdown').dropdown();
 
@@ -41,5 +42,7 @@ function rateExchange(){
     $('#convertedModal').modal('show');
     $('#nativeCurrency').text(nativeCurrency);
     $('#convertedCurrency').text(convertedCurrency);
+    convertedRate = Math.round(response.rates[convertedCurrency] * 100) / 100
+    $('#convertedRate').text(convertedRate);
   })
 }
