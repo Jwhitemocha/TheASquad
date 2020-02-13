@@ -73,36 +73,44 @@
 
 
 
-    <!-- Column that houses the large converted currency icon buttons, upon clicking these should prompt the secondary modal -->
-    <div class="sixteen wide column">
-      <div id="icons">
-        <br><br>
-        <h1>Convert by Currency</h1>
-        <br>
-        <button id="currencyBtn-USD" class="currencyIcon">$</button>
-        <button id="currencyBtn-EUR" class="currencyIcon">€</button>
-        <button id="currencyBtn-GBP" class="currencyIcon">£</button>
-        <button id="currencyBtn-JPY" class="currencyIcon">¥</button>
-      </div>
-    </div>
-
-          <!-- UI Grid closing Div -->
+      <!-- Column that houses the large converted currency icon buttons, upon clicking these should prompt the secondary modal -->
+      <div class="sixteen wide column">
+        <div id="icons">
+          <br><br>
+          <h1>Convert by Currency</h1>
+          <br>
+          <button id="currencyBtn-USD" class="currencyIcon">$</button>
+          <button id="currencyBtn-EUR" class="currencyIcon">€</button>
+          <button id="currencyBtn-GBP" class="currencyIcon">£</button>
+          <button id="currencyBtn-JPY" class="currencyIcon">¥</button>
         </div>
+      </div>
+
+      <!-- UI Grid closing Div -->
+    </div>
 
     <!-- UI Container closing Div -->
   </div>
 
 
-    <!-- Secondary modal that appears when a currency icon is clicked -->
-    <div id="convertedModal" class="ui modal">
-      <h3 id="displayConverted">Euro</h3>
+  <!-- Secondary modal that appears when a currency icon is clicked -->
+  <div id="convertedModal" class="ui modal">
+    <h3 id="displayConverted">Euro</h3>
 
-      <div id="exchangeRate">
-        <span id="nativeCurrency">USD<input input="number" id="checkNative"></span> to <span id="convertedCurrency">Euro<input input="number" id="checkConverted"></span>
-      </div>
-
-  
+    <div id="exchangeRate">
+      <span id="nativeRate"></span> => <span id="convertedRate"></span>
+      <br>
     </div>
+
+      <div id="nativeCurrency">USD</div>
+      <input input="number" id="checkNative">
+      to <div id="convertedCurrency">Euro</div>
+      <input input="number" id="checkConverted">
+
+
+
+
+  </div>
 
   <!-- Semantic UI JavaScript file, these functions are required in order to call the desired component -->
   <script src="javascript/ui.js"></script>
