@@ -18,7 +18,15 @@ $(".item").click(function() {
     console.log(response.hello);
     });
 
+// Displaying 'Hello' based on Country Clicked 
 
+    $('#displayConverted').text(JSON.stringify(response));
+    
 });
+
+
+
+
+
 
 
