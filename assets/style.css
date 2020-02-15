@@ -117,3 +117,7 @@ input:hover {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.flagSize { 
+   height: 150px;  
+}
