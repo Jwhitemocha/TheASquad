@@ -17,7 +17,7 @@ $(".item").click(function() {
         
 // Displaying 'Hello' based on Country Clicked 
 
-    $('#displayConverted').text(JSON.stringify(response.hello));
+    $('#displayConverted').text(response.hello);
 
     console.log(helloUrl);
     console.log(response.hello);
