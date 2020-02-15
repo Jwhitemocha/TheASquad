@@ -57,10 +57,10 @@
         <div class="ui button dropdown">
           <span class="text">Select Country</span>
           <div class="menu">
-            <div id="convertedList-USD" class="en item" symbol="$">United States</div>
-            <div id="convertedList-EUR" class="fr item" symbol="€">France</div>
-            <div id="convertedList-GBP" class="en-gb item" symbol="£">England</div>
-            <div id="convertedList-JPY" class="ja item" symbol="¥">Japan</div>
+            <div id="convertedList-USD" class="en item" symbol="$" flag="US">United States</div>
+            <div id="convertedList-EUR" class="fr item" symbol="€" flag="FR">France</div>
+            <div id="convertedList-GBP" class="en-gb item" symbol="£" flag="GB">England</div>
+            <div id="convertedList-JPY" class="ja item" symbol="¥" flag="JP">Japan</div>
           </div>
         </div>
       </div>
@@ -90,6 +90,8 @@
   <!-- Secondary modal that appears when a currency icon is clicked -->
   <div id="convertedModal" class="ui modal">
     <h3 id="displayConverted">Euro</h3>
+
+    <div id="flagPic"> </div> 
 
     <div id="exchangeRate">
       <span id="nativeRate" class="modalSpan"></span>
