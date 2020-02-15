@@ -1,6 +1,8 @@
-let nativeCurrency = 'USD';
+let nativeCurrency;
 let convertedCurrency;
 let convertedRate;
+let nativeSymbol;
+let convertedSymbol;
 
 $('.ui.dropdown').dropdown();
 
@@ -14,18 +16,24 @@ $('#displayNative').click(function(){
 // Changes native currency
 $('.nativeBtn').click(function(){
   nativeCurrency = $(this).attr('id').slice(-3);
+  nativeSymbol = $(this).attr('symbol');
+  $("#nativeRate").prepend(nativeSymbol);
   $('#displayNative').text(nativeCurrency);
   $('#nativeModal').modal('hide');
 })
 
-// Changes coverted currency to Euro
+// Changes coverted currency
 $(`.item`).click(function(){
   convertedCurrency = $(this).attr('id').slice(-3);
+  convertedSymbol = $(this).attr('symbol');
+  $("#convertedRate").prepend(convertedSymbol);
   rateExchange();
 });
 
 $('.currencyIcon').click(function(){
   convertedCurrency = $(this).attr('id').slice(-3);
+  convertedSymbol = $(this).attr('symbol');
+  $("#convertedRate").prepend(convertedSymbol);
   rateExchange();
 })
 
@@ -36,7 +44,6 @@ function rateExchange(){
     url,
     method: "GET"
   }).then(function(response){
-    console.log(response);
     $('#convertedModal').modal('show');
     $('#nativeCurrency').text(nativeCurrency);
     $('#convertedCurrency').text(convertedCurrency);
@@ -45,7 +52,7 @@ function rateExchange(){
     if(nativeCurrency === convertedCurrency){
       convertedRate = 1
     }
-    $('#convertedRate').text(convertedRate);
+    $('#convertedRate').append(convertedRate);
 
     $('#convertBtn').click(function(){
       let convertedInput = roundedToTwoDec($('#checkNative').val() * response.rates[convertedCurrency]);
