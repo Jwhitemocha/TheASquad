@@ -21,11 +21,19 @@ $(".item").click(function() {
 
     console.log(helloUrl);
     console.log(response.hello);
-    });
+// GET JAPANESE CHARACTERS & DISPLAY PROPER CHARACTERS      
+var japhello = "こんにちは (Kon'nichiwa)"; 
+    if (response.hello === "&#12371;&#12435;&#12395;&#12385;&#12399;") { 
+        $('#displayConverted').html(japhello); 
 
-// Displaying 'Hello' based on Country Clicked 
+};
+
+
+});
 
     
+    // こんにちは -- 'Kon'nichiwa 
+
 });
 
 
