@@ -12,6 +12,8 @@
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
   <!-- Reset file that erases all different browser default HTML -->
   <link rel="stylesheet" href="assets/reset.css">
+  <!-- Linking Moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
   <!-- Linking CSS file to this HTML -->
@@ -89,12 +91,12 @@
 
   <!-- Secondary modal that appears when a currency icon is clicked -->
   <div id="convertedModal" class="ui modal">
-    <h3 id="displayConverted">Euro</h3>
+    <h3 id="displayConverted"></h3>
 
     <div id="flagPic"> </div> 
 
     <div id="exchangeRate">
-      <span id="nativeRate" class="modalSpan"></span>
+      <span class="modalSpan nativeRate"></span>
       <h4>=></h4>
       <span id="convertedRate" class="modalSpan"></span>
     </div>
@@ -108,16 +110,18 @@
     </div>
     <button id="convertBtn" class="ui button">Convert</button>
 
+    <span class="modalSpan">Last Week's Rate</span>
     <div id="previousRate">
-      <span id="nativeRate" class="modalSpan">1</span>
+      <span class="modalSpan nativeRate"></span>
       <h4>=></h4>
-      <span id="convertedPreviousRate" class="modalSpan">Last weeks rate</span>
+      <span id="convertedPreviousRate" class="modalSpan"></span>
     </div>
 
 
   </div>
 
   <!-- Semantic UI JavaScript file, these functions are required in order to call the desired component -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="javascript/ui.js"></script>
   <script src="JasonJS.js"></script>
 
