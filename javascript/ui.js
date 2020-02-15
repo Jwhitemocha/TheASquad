@@ -17,8 +17,8 @@ $('#displayNative').click(function(){
 $('.nativeBtn').click(function(){
   nativeCurrency = $(this).attr('id').slice(-3);
   nativeSymbol = $(this).attr('symbol');
-  $("#nativeRate").prepend(nativeSymbol);
   $('#displayNative').text(nativeCurrency);
+  $("#nativeRate").text(nativeSymbol + 1);
   $('#nativeModal').modal('hide');
 })
 
@@ -26,16 +26,8 @@ $('.nativeBtn').click(function(){
 $(`.item`).click(function(){
   convertedCurrency = $(this).attr('id').slice(-3);
   convertedSymbol = $(this).attr('symbol');
-  $("#convertedRate").prepend(convertedSymbol);
   rateExchange();
 });
-
-$('.currencyIcon').click(function(){
-  convertedCurrency = $(this).attr('id').slice(-3);
-  convertedSymbol = $(this).attr('symbol');
-  $("#convertedRate").prepend(convertedSymbol);
-  rateExchange();
-})
 
 // Getting the Exchange Rate API
 function rateExchange(){
@@ -52,7 +44,7 @@ function rateExchange(){
     if(nativeCurrency === convertedCurrency){
       convertedRate = 1
     }
-    $('#convertedRate').append(convertedRate);
+    $('#convertedRate').text(convertedSymbol + convertedRate);
 
     $('#convertBtn').click(function(){
       let convertedInput = roundedToTwoDec($('#checkNative').val() * response.rates[convertedCurrency]);
