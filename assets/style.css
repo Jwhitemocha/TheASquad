@@ -119,5 +119,10 @@ input:hover {
 }
 
 .flagSize { 
-   height: 150px;  
+   height: 100px;
+   padding-left: 20px;  
+}
+
+#exchangeRate {
+  font-size: 50px;
 }
