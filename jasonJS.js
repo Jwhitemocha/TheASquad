@@ -24,6 +24,12 @@ $(".item").click(function() {
     if (response.hello === "&#12371;&#12435;&#12395;&#12385;&#12399;") { 
         $('#displayConverted').html(japhello); 
     };
+
+    var polishHello = "Cześć";
+
+    if (response.hello === "Cze&#347;&#263;") { 
+        $('#displayConverted').html(polishHello);
+    };
 });
 });
 
