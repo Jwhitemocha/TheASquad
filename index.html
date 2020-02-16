@@ -27,13 +27,11 @@
   <!-- Initial modal that appears on page load -->
   <div id="nativeModal" class="ui modal">
     <h3>What is your native currency?</h3>
-
     <!-- Buttons to choose native currency in initial modal -->
     <div id="nativeBtn-USD" class="ui button nativeBtn" symbol="$">American Dollar</div>
     <div id="nativeBtn-EUR" class="ui button nativeBtn" symbol="€">Euro</div>
     <div id="nativeBtn-GBP" class="ui button nativeBtn" symbol="£">Pound</div>
     <div id="nativeBtn-JPY" class="ui button nativeBtn" symbol="¥">Yen</div>
-
   </div>
 
   <!-- Primary container that houses all main page elements -->
@@ -41,16 +39,12 @@
     <!-- Grid system which also center aligns column contents -->
     <div class="ui middle aligned grid">
 
-
-
       <!-- Column that houses native currency display and button to initiate initial modal again, to change native currency -->
       <div class="sixteen wide column">
         <h1>Native Currency</h1>
         <br>
         <div id="displayNative" class="ui button">Select currency</div>
       </div>
-
-
 
       <!-- Column that houses a drop down menu with all available countries, should the user choose to locate the desired currency via country versus currency symbol -->
       <div class="sixteen wide column">
@@ -63,12 +57,13 @@
             <div id="convertedList-EUR" class="fr item" symbol="€" flag="FR">France</div>
             <div id="convertedList-GBP" class="en-gb item" symbol="£" flag="GB">England</div>
             <div id="convertedList-JPY" class="ja item" symbol="¥" flag="JP">Japan</div>
+            <div id="convertedList-CHF" class="ch item" symbol="Fr. " flag="CH">Switzerland</div>
+            <div id="convertedList-CAD" class="ca item" symbol="$" flag="CA">Canada</div>
+            <div id="convertedList-PLN" class="pl item" symbol="zł " flag="PL">Poland</div>
+
           </div>
         </div>
       </div>
-
-
-
 
       <!-- Column that houses the large converted currency icon buttons, upon clicking these should prompt the secondary modal -->
       <div class="sixteen wide column">
@@ -84,23 +79,21 @@
 
       <!-- UI Grid closing Div -->
     </div>
-
     <!-- UI Container closing Div -->
   </div>
-
 
   <!-- Secondary modal that appears when a currency icon is clicked -->
   <div id="convertedModal" class="ui modal">
     <h3 id="displayConverted"></h3>
 
-    <div id="flagPic"> </div> 
-
+    <!-- Basic 1.1 exchange rate information -->
     <div id="exchangeRate">
       <span class="modalSpan nativeRate"></span>
       <h4>=></h4>
       <span id="convertedRate" class="modalSpan"></span>
     </div>
 
+    <!-- Custom number amount rate conversion -->
     <div id="customConversion">
       <span id="nativeCurrency" class="modalSpan">USD</span>
       <input type="number" id="checkNative">
@@ -110,14 +103,18 @@
     </div>
     <button id="convertBtn" class="ui button">Convert</button>
 
-    <span class="modalSpan">Last Week's Rate</span>
+    <!-- Last weeks exchange rate -->
     <div id="previousRate">
+      <span class="modalSpan">Last Week's Rate:</span>
       <span class="modalSpan nativeRate"></span>
       <h4>=></h4>
       <span id="convertedPreviousRate" class="modalSpan"></span>
     </div>
 
+    <!-- Flag API display -->
+    <div id="flagPic"></div>
 
+    <!-- Secondary Modal closing tag -->
   </div>
 
   <!-- Semantic UI JavaScript file, these functions are required in order to call the desired component -->
