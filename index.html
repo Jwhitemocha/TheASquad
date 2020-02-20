@@ -21,19 +21,40 @@
   <!-- Initial modal that appears on page load -->
   <div id="nativeModal" class="ui modal">
     <h3>What is your native currency?</h3>
-    <!-- Buttons to choose native currency in initial modal -->
+    <!-- Buttons for all 33 different currencies, to choose native in initial modal -->
     <div id="nativeBtn-USD" class="ui button nativeBtn" symbol="$">American Dollar</div>
-    <div id="nativeBtn-CAD" class="ui button nativeBtn" symbol="$">Canadian Dollar</div>
-    <div id="nativeBtn-CZK" class="ui button nativeBtn" symbol="Kč">Czech Koruna</div>
-    <div id="nativeBtn-SEK" class="ui button nativeBtn" symbol="kr">Swedish Krona</div>
-    <div id="nativeBtn-EUR" class="ui button nativeBtn" symbol="€">Euro</div>
-    <div id="nativeBtn-CHF" class="ui button nativeBtn" symbol="Fr.">Swiss Franc</div>
-    <div id="nativeBtn-MXN" class="ui button nativeBtn" symbol="$">Mexican Peso</div>
+    <div id="nativeBtn-AUD" class="ui button nativeBtn" symbol="$">Australian Dollar</div>
+    <div id="nativeBtn-BRL" class="ui button nativeBtn" symbol="R$">Brazilian Real</div>
     <div id="nativeBtn-GBP" class="ui button nativeBtn" symbol="£">British Pound</div>
-    <div id="nativeBtn-RUB" class="ui button nativeBtn" symbol="₽">Russian Ruble</div>
-    <div id="nativeBtn-JPY" class="ui button nativeBtn" symbol="¥">Japanese Yen</div>
+    <div id="nativeBtn-BGN" class="ui button nativeBtn" symbol="Лв.">Bulgarian Lev</div>
+    <div id="nativeBtn-CAD" class="ui button nativeBtn" symbol="$">Canadian Dollar</div>
     <div id="nativeBtn-CNY" class="ui button nativeBtn" symbol="¥">Chinese Yuan</div>
+    <div id="nativeBtn-HRK" class="ui button nativeBtn" symbol="kn">Croatian Kuna</div>
+    <div id="nativeBtn-CZK" class="ui button nativeBtn" symbol="Kč">Czech Koruna</div>
+    <div id="nativeBtn-DKK" class="ui button nativeBtn" symbol="kr">Danish Krone</div>
+    <div id="nativeBtn-EUR" class="ui button nativeBtn" symbol="€">Euro</div>
+    <div id="nativeBtn-HKD" class="ui button nativeBtn" symbol="HK$">Hong Kong Dollar</div>
+    <div id="nativeBtn-HUF" class="ui button nativeBtn" symbol="Ft">Hungarian Forint</div>
+    <div id="nativeBtn-ISK" class="ui button nativeBtn" symbol="kr">Icelandic Krona</div>
+    <div id="nativeBtn-INR" class="ui button nativeBtn" symbol="₹">Indian Rupee</div>
+    <div id="nativeBtn-IDR" class="ui button nativeBtn" symbol="Rp">Indonesian Rupiah</div>
+    <div id="nativeBtn-ILS" class="ui button nativeBtn" symbol="₪">Israeli New Shekel</div>
+    <div id="nativeBtn-JPY" class="ui button nativeBtn" symbol="¥">Japanese Yen</div>
+    <div id="nativeBtn-MYR" class="ui button nativeBtn" symbol="RM">Malaysian Ringgit</div>
+    <div id="nativeBtn-MXN" class="ui button nativeBtn" symbol="$">Mexican Peso</div>
+    <div id="nativeBtn-NZD" class="ui button nativeBtn" symbol="$">New Zealand Dollar</div>
+    <div id="nativeBtn-NOK" class="ui button nativeBtn" symbol="kr">Norwegian Krone</div>
+    <div id="nativeBtn-PHP" class="ui button nativeBtn" symbol="₱">Philippine Peso</div>
     <div id="nativeBtn-PLN" class="ui button nativeBtn" symbol="zł">Polish Złoty</div>
+    <div id="nativeBtn-RON" class="ui button nativeBtn" symbol="lei">Romanian Leu</div>
+    <div id="nativeBtn-RUB" class="ui button nativeBtn" symbol="₽">Russian Ruble</div>
+    <div id="nativeBtn-SGD" class="ui button nativeBtn" symbol="$">Singapore Dollar</div>
+    <div id="nativeBtn-ZAR" class="ui button nativeBtn" symbol="R">South African Rand</div>
+    <div id="nativeBtn-KRW" class="ui button nativeBtn" symbol="₩">South Korean Won</div>
+    <div id="nativeBtn-SEK" class="ui button nativeBtn" symbol="kr">Swedish Krona</div>
+    <div id="nativeBtn-CHF" class="ui button nativeBtn" symbol="Fr.">Swiss Franc</div>
+    <div id="nativeBtn-THB" class="ui button nativeBtn" symbol="฿">Thai Baht</div>
+    <div id="nativeBtn-TRY" class="ui button nativeBtn" symbol="₺">Turkish Lira</div>
   </div>
 
   <!-- Primary container that houses all main page elements -->
@@ -63,28 +84,11 @@
         </div>
       </div>
 
-      <!-- Euro icon -->
-      <div class="five wide column">
-        <h2>€</h2>
-      </div>
-      <div class="eleven wide column">
-        <div class="row">
-          <button id="currencyBtn-EUR" class="fr item currencyIcon" symbol="€" flag="FR">France</button>
-        </div>
-        <div class="row">
-          <button id="currencyBtn-EUR" class="de item currencyIcon" symbol="€" flag="DE">Germany</button>
-        </div>
-        <div class="row">
-          <button id="currencyBtn-EUR" class="it item currencyIcon" symbol="€" flag="IT">Italy</button>
-        </div>
-      </div>
-
       <!-- Dollar icon -->
       <div class="five wide column">
         <h2>$</h2>
       </div>
       <div class="eleven wide column">
-
         <div class="row">
           <button id="currencyBtn-AUD" class="en-gb item currencyIcon" symbol="$" flag="AU">Australia</button>
         </div>
@@ -103,7 +107,6 @@
         <div class="row">
           <button id="currencyBtn-USD" class="en item currencyIcon" symbol="$" flag="US">United States</button>
         </div>
-
       </div>
 
       <!-- Yen icon -->
@@ -116,6 +119,37 @@
         </div>
         <div class="row">
           <button id="currencyBtn-JPY" class="ja item currencyIcon" symbol="¥" flag="JP">Japan</button>
+        </div>
+      </div>
+
+      <!-- Euro icon -->
+      <div class="five wide column">
+        <h2>€</h2>
+      </div>
+      <div class="eleven wide column">
+        <div class="row">
+          <button id="currencyBtn-EUR" class="fr item currencyIcon" symbol="€" flag="FR">France</button>
+        </div>
+        <div class="row">
+          <button id="currencyBtn-EUR" class="de item currencyIcon" symbol="€" flag="DE">Germany</button>
+        </div>
+        <div class="row">
+          <button id="currencyBtn-EUR" class="it item currencyIcon" symbol="€" flag="IT">Italy</button>
+        </div>
+        <div class="row">
+          <button id="currencyBtn-EUR" class="nl item currencyIcon" symbol="€" flag="NL">Netherlands</button>
+        </div>
+        <div class="row">
+          <button id="currencyBtn-EUR" class="es item currencyIcon" symbol="€" flag="ES">Spain</button>
+        </div>
+        <div class="row">
+          <button id="currencyBtn-EUR" class="pt item currencyIcon" symbol="€" flag="PT">Portugal</button>
+        </div>
+        <div class="row">
+          <button id="currencyBtn-EUR" class="el item currencyIcon" symbol="€" flag="GR">Greece</button>
+        </div>
+        <div class="row">
+          <button id="currencyBtn-EUR" class="fi item currencyIcon" symbol="€" flag="FI">Finland</button>
         </div>
       </div>
 
@@ -138,8 +172,6 @@
         </div>
       </div>
 
-
-
       <!-- Column that houses a drop down menu with all available countries, should the user choose to locate the desired currency via country versus currency symbol -->
       <div class="sixteen wide column">
         <h1>Additional Countries</h1>
@@ -147,11 +179,14 @@
         <div class="ui button dropdown">
           <span class="text">Select Country</span>
           <div class="menu">
-
             <div id="convertedList-BRL" class="pt item" symbol="R$" flag="BR">Brazil</div>
             <div id="convertedList-BGN" class="bg item" symbol="Лв." flag="BG">Bulgaria</div>
             <div id="convertedList-HRK" class="hr item" symbol="kn" flag="HR">Croatia</div>
             <div id="convertedList-CZK" class="cs item" symbol="Kč" flag="CZ">Czech Republic</div>
+            <div id="convertedList-HUF" class="hu item" symbol="Ft" flag="HU">Hungary</div>
+            <div id="convertedList-INR" class="hi item" symbol="₹" flag="IN">India</div>
+            <div id="convertedList-IDR" class="id item" symbol="Rp" flag="ID">Indonesia</div>
+            <div id="convertedList-ILS" class="he item" symbol="₪" flag="IL">Israel</div>
             <div id="convertedList-MYR" class="ms item" symbol="RM" flag="MY">Malaysia</div>
             <div id="convertedList-MXN" class="es item" symbol="$" flag="MX">Mexico</div>
             <div id="convertedList-PHP" class="fil item" symbol="₱" flag="PH">Philippines</div>
@@ -163,7 +198,6 @@
             <div id="convertedList-CHF" class="de item" symbol="Fr." flag="CH">Switzerland</div>
             <div id="convertedList-THB" class="th item" symbol="฿" flag="TH">Thailand</div>
             <div id="convertedList-TRY" class="tk item" symbol="₺" flag="TR">Turkey</div>
-
           </div>
         </div>
       </div>

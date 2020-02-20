@@ -64,6 +64,23 @@ $(".item").click(function() {
         $('#helloDisplay').html(koreanHello); 
     };
 
+    const hindiHello = "नमस्कार (namaskaar)"; 
+    if (response.hello === "&#2344;&#2350;&#2360;&#2381;&#2340;&#2375;") { 
+        $('#helloDisplay').html(hindiHello); 
+    };
+
+    const hebrewHello = "שלום"; 
+    if (response.hello === "&#1513;&#1500;&#1493;&#1501;") { 
+        $('#helloDisplay').html(hebrewHello); 
+    };
+
+    const greekHello = "Γεια σου"; 
+    if (response.hello === "&#915;&#949;&#953;&#945; &#963;&#959;&#965;") { 
+        $('#helloDisplay').html(greekHello); 
+    };
+
+
+
 });
 });
 
