@@ -48,6 +48,7 @@
           <span class="text">Select Country</span>
           <div class="menu">
 
+            <div id="convertedList-AUD" class="en-gb item" symbol=" $ " flag="AU">Australia</div>
             <div id="convertedList-CAD" class="ca item" symbol=" $ " flag="CA">Canada</div>
             <div id="convertedList-CZK" class="cs item" symbol=" Kč " flag="CZ">Czech Republic</div>
             <div id="convertedList-GBP" class="en-gb item" symbol=" £ " flag="GB">England</div>
@@ -70,7 +71,9 @@
         <div id="icons">
           <h1>Convert by Currency</h1>
           <br>
-          <button id="currencyBtn-USD" class="en item currencyIcon" symbol="$" flag="US">$</button>
+          <button id="currencyBtn-USD" class="en item currencyIcon" symbol="$" flag="US">US$</button>
+          <button id="currencyBtn-MXN" class="es item currencyIcon" symbol="$" flag="MX">M$</button>
+          <button id="currencyBtn-AUD" class="en-gb item currencyIcon" symbol="$" flag="AU">A$</button>
           <button id="currencyBtn-EUR" class="fr item currencyIcon" symbol="€" flag="FR">€</button>
           <button id="currencyBtn-GBP" class="en-gb item currencyIcon" symbol="£" flag="GB">£</button>
           <button id="currencyBtn-JPY" class="ja item currencyIcon" symbol="¥" flag="JP">¥</button>
@@ -90,16 +93,16 @@
 
     <!-- Basic 1.1 exchange rate information -->
     <div id="exchangeRate">
-      <span class="modalSpan nativeRate"></span>
-      <h4>=></h4>
-      <span id="convertedRate" class="modalSpan"></span><i id="rateIcon"></i>
+      <span class=" nativeRate"></span>
+      <i class="arrow right icon"></i>
+      <span id="convertedRate"></span><i id="rateIcon"></i>
     </div>
 
     <!-- Custom number amount rate conversion -->
     <div id="customConversion">
       <span id="nativeCurrency" class="modalSpan">USD</span>
       <input type="number" id="checkNative">
-      <h4>=</h4>
+      <i class="arrow right icon modalSpan"></i>
       <span id="convertedCurrency" class="modalSpan">Euro</span>
       <input type="number" id="checkConverted">
     </div>
@@ -107,25 +110,16 @@
 
     <!-- Last weeks exchange rate -->
     <div id="previousRate">
-      <span class="modalSpan">Last Week's Rate:</span>
-      <span class="modalSpan nativeRate"></span>
-      <h4>=></h4>
-      <span id="convertedPreviousRate" class="modalSpan"></span>
+      <span>Last Week's Rate:</span>
+      <span class="nativeRate"></span>
+      <i class="arrow right icon"></i>
+      <span id="convertedPreviousRate"></span>
     </div>
 
     <!-- Flag API -->
     <div id="flagPic"></div>
 
     <!-- Secondary Modal closing tag -->
-  </div>
-
-  <!-- Dollar sign modal -->
-  <div id="dollarModal" class="ui modal">
-    <h3>Which currency are you searching for?</h3>
-    <!-- Buttons to choose converted currency in Dollar modal -->
-    <div id="convertedList-USD" class="ui button en item" symbol="$ " flag="US">American Dollar</div>
-    <div id="convertedList-CAD" class="ui button ca item" symbol="$ " flag="CA">Canadian Dollar</div>
-    <div id="convertedList-MXN" class="ui button es item" symbol="$ " flag="MX">Mexico</div>
   </div>
 
   <!-- Semantic UI JavaScript file, these functions are required in order to call the desired component -->
