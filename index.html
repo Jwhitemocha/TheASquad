@@ -7,15 +7,12 @@
 
 
   <!-- Semantic UI stylesheet link -->
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
   <!-- Reset file that erases all different browser default HTML -->
   <link rel="stylesheet" href="assets/reset.css">
-  <!-- Linking Moment.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto&display=swap" rel="stylesheet">
   <!-- Linking CSS file to this HTML -->
   <link rel="stylesheet" href="assets/style.css">
 
@@ -57,9 +54,12 @@
             <div id="convertedList-EUR" class="fr item" symbol="€" flag="FR">France</div>
             <div id="convertedList-GBP" class="en-gb item" symbol="£" flag="GB">England</div>
             <div id="convertedList-JPY" class="ja item" symbol="¥" flag="JP">Japan</div>
-            <div id="convertedList-CHF" class="ch item" symbol="Fr. " flag="CH">Switzerland</div>
+            <div id="convertedList-CHF" class="de item" symbol="Fr. " flag="CH">Switzerland</div>
             <div id="convertedList-CAD" class="ca item" symbol="$" flag="CA">Canada</div>
             <div id="convertedList-PLN" class="pl item" symbol="zł " flag="PL">Poland</div>
+            <div id="convertedList-CZK" class="de item" symbol="Kč " flag="CZ">Czech Republic</div>
+            <div id="convertedList-MXN" class="es item" symbol="$ " flag="MXN">Mexico</div>
+            <div id="convertedList-RUB" class="ru item" symbol="₽ " flag="RUB">Russia</div>
 
           </div>
         </div>
@@ -118,9 +118,14 @@
   </div>
 
   <!-- Semantic UI JavaScript file, these functions are required in order to call the desired component -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <!-- Linking Moment.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="jasonJS.js"></script>
   <script src="javascript/ui.js"></script>
-  <script src="JasonJS.js"></script>
+
 
 </body>
 
