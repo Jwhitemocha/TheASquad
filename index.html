@@ -47,7 +47,7 @@
         <div class="ui button dropdown">
           <span class="text">Select Country</span>
           <div class="menu">
-            
+
             <div id="convertedList-CAD" class="ca item" symbol="$ " flag="CA">Canada</div>
             <div id="convertedList-CZK" class="de item" symbol="Kč " flag="CZ">Czech Republic</div>
             <div id="convertedList-GBP" class="en-gb item" symbol="£ " flag="GB">England</div>
@@ -114,6 +114,15 @@
 
     <!-- Secondary Modal closing tag -->
   </div>
+
+    <!-- Dollar sign modal -->
+    <div id="dollarModal" class="ui modal">
+      <h3>Which currency are you searching for?</h3>
+      <!-- Buttons to choose converted currency in Dollar modal -->
+      <div id="convertedList-USD" class="ui button en item" symbol="$ " flag="US">American Dollar</div>
+      <div id="convertedList-CAD" class="ui button ca item" symbol="$ " flag="CA">Canadian Dollar</div>
+      <div id="convertedList-MXN" class="ui button es item" symbol="$ " flag="MX">Mexico</div>
+    </div>
 
   <!-- Semantic UI JavaScript file, these functions are required in order to call the desired component -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
