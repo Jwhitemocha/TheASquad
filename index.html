@@ -48,11 +48,11 @@
           <span class="text">Select Country</span>
           <div class="menu">
 
-            <div id="convertedList-CAD" class="ca item" symbol="$ " flag="CA">Canada</div>
-            <div id="convertedList-CZK" class="cs item" symbol="Kč " flag="CZ">Czech Republic</div>
-            <div id="convertedList-GBP" class="en-gb item" symbol="£ " flag="GB">England</div>
-            <div id="convertedList-EUR" class="fr item" symbol="€ " flag="FR">France</div>
-            <div id="convertedList-EUR" class="de item" symbol="€ " flag="DE">Germany</div>
+            <div id="convertedList-CAD" class="ca item" symbol=" $ " flag="CA">Canada</div>
+            <div id="convertedList-CZK" class="cs item" symbol=" Kč " flag="CZ">Czech Republic</div>
+            <div id="convertedList-GBP" class="en-gb item" symbol=" £ " flag="GB">England</div>
+            <div id="convertedList-EUR" class="fr item" symbol=" € " flag="FR">France</div>
+            <div id="convertedList-EUR" class="de item" symbol=" € " flag="DE">Germany</div>
             <div id="convertedList-EUR" class="it item" symbol="€ " flag="IT">Italy</div>
             <div id="convertedList-JPY" class="ja item" symbol="¥ " flag="JP">Japan</div>
             <div id="convertedList-MXN" class="es item" symbol="$ " flag="MX">Mexico</div>
@@ -84,16 +84,15 @@
 
   <!-- Secondary modal that appears when a currency icon is clicked -->
   <div id="convertedModal" class="ui modal">
-        <!-- Flag API display -->
 
-<div id="flagPic"></div>
-<h3 id="displayConverted"></h3>
+    <!-- Displays Hello in converted language -->
+    <h3 id="helloDisplay"></h3>
 
     <!-- Basic 1.1 exchange rate information -->
     <div id="exchangeRate">
       <span class="modalSpan nativeRate"></span>
       <h4>=></h4>
-      <span id="convertedRate" class="modalSpan"></span>
+      <span id="convertedRate" class="modalSpan"></span><i id="rateIcon"></i>
     </div>
 
     <!-- Custom number amount rate conversion -->
@@ -114,17 +113,20 @@
       <span id="convertedPreviousRate" class="modalSpan"></span>
     </div>
 
+    <!-- Flag API -->
+    <div id="flagPic"></div>
+
     <!-- Secondary Modal closing tag -->
   </div>
 
-    <!-- Dollar sign modal -->
-    <div id="dollarModal" class="ui modal">
-      <h3>Which currency are you searching for?</h3>
-      <!-- Buttons to choose converted currency in Dollar modal -->
-      <div id="convertedList-USD" class="ui button en item" symbol="$ " flag="US">American Dollar</div>
-      <div id="convertedList-CAD" class="ui button ca item" symbol="$ " flag="CA">Canadian Dollar</div>
-      <div id="convertedList-MXN" class="ui button es item" symbol="$ " flag="MX">Mexico</div>
-    </div>
+  <!-- Dollar sign modal -->
+  <div id="dollarModal" class="ui modal">
+    <h3>Which currency are you searching for?</h3>
+    <!-- Buttons to choose converted currency in Dollar modal -->
+    <div id="convertedList-USD" class="ui button en item" symbol="$ " flag="US">American Dollar</div>
+    <div id="convertedList-CAD" class="ui button ca item" symbol="$ " flag="CA">Canadian Dollar</div>
+    <div id="convertedList-MXN" class="ui button es item" symbol="$ " flag="MX">Mexico</div>
+  </div>
 
   <!-- Semantic UI JavaScript file, these functions are required in order to call the desired component -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
