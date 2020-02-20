@@ -1,13 +1,13 @@
 // Getting helloSalut API 
 
-var languageCode 
+let languageCode;
 
 // Function to change to proper languageCode based on country clicked
 $(".item").click(function() { 
 
-    languageCode = $(this).attr('class').split(" ")[0]
+    languageCode = $(this).attr('class').split(" ")[0];
 
-    var helloUrl = "https://fourtonfish.com/hellosalut/?lang=" + languageCode; 
+    let helloUrl = "https://fourtonfish.com/hellosalut/?lang=" + languageCode; 
 
     $.ajax({
     url: helloUrl,
@@ -19,24 +19,34 @@ $(".item").click(function() {
     $('#helloDisplay').text(response.hello);
 
 // GET JAPANESE CHARACTERS & DISPLAY PROPER CHARACTERS      
-    var japaneseHello = "こんにちは (Kon'nichiwa)"; 
+    const japaneseHello = "こんにちは (Kon'nichiwa)"; 
     if (response.hello === "&#12371;&#12435;&#12395;&#12385;&#12399;") { 
         $('#helloDisplay').html(japaneseHello); 
     };
 
-    var polishHello = "Cześć";
+    const polishHello = "Cześć";
     if (response.hello === "Cze&#347;&#263;") { 
         $('#helloDisplay').html(polishHello);
     };
 
-    var russianHello = "Здравствуйте (Zdravstvuyte)";
+    const russianHello = "Здравствуйте (Zdravstvuyte)";
     if (response.hello === "&#1087;&#1088;&#1080;&#1074;&#1077;&#1090;") { 
         $('#helloDisplay').html(russianHello);
     };
 
-    var italianHello = "Ciao"; 
+    const italianHello = "Ciao"; 
     if (response.hello === "Ci&agrave;o") { 
         $('#helloDisplay').html(italianHello); 
+    };
+
+    const chineseHello = "你好 (Nǐ hǎo)"; 
+    if (response.hello === "&#20320;&#22909;") { 
+        $('#helloDisplay').html(chineseHello); 
+    };
+
+    const icelandicHello = "Halló"; 
+    if (response.hello === "H&aelig;") { 
+        $('#helloDisplay').html(icelandicHello); 
     };
     
 });
@@ -47,8 +57,8 @@ $(".item").click(function() {
 // countryCode = "JP";
 $(".item").click(function() { 
 $('#flagPic').empty() 
-    var countryCode = $(this).attr("flag");
-    var flags = "<img class= 'flagSize' src=https://www.countryflags.io/" + countryCode + "/flat/64.png>"
+    let countryCode = $(this).attr("flag");
+    let flags = "<img class= 'flagSize' src=https://www.countryflags.io/" + countryCode + "/flat/64.png>"
 
     $('#flagPic').prepend(flags);
 }); 

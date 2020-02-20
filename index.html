@@ -10,7 +10,7 @@
   <!-- Reset file that erases all different browser default HTML -->
   <link rel="stylesheet" href="assets/reset.css">
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=Noto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
   <!-- Linking CSS file to this HTML -->
   <link rel="stylesheet" href="assets/style.css">
 
@@ -24,16 +24,16 @@
     <!-- Buttons to choose native currency in initial modal -->
     <div id="nativeBtn-USD" class="ui button nativeBtn" symbol="$">American Dollar</div>
     <div id="nativeBtn-CAD" class="ui button nativeBtn" symbol="$">Canadian Dollar</div>
-    <div id="nativeBtn-CZK" class="ui button nativeBtn" symbol=" Kč">Koruna</div>
-    <div id="nativeBtn-SEK" class="ui button nativeBtn" symbol=" kr">Krona</div>
-    <div id="nativeBtn-EUR" class="ui button nativeBtn" symbol="€ ">Euro</div>
-    <div id="nativeBtn-CHF" class="ui button nativeBtn" symbol=" Fr.">Franc</div>
-    <div id="nativeBtn-MXN" class="ui button nativeBtn" symbol="$">Pesos</div>
-    <div id="nativeBtn-GBP" class="ui button nativeBtn" symbol="£">Pound</div>
-    <div id="nativeBtn-RUB" class="ui button nativeBtn" symbol=" ₽">Ruble</div>
-    <div id="nativeBtn-JPY" class="ui button nativeBtn" symbol="¥">Yen</div>
-    <div id="nativeBtn-CNY" class="ui button nativeBtn" symbol="¥">Yuan</div>
-    <div id="nativeBtn-PLN" class="ui button nativeBtn" symbol=" zł">Złoty</div>
+    <div id="nativeBtn-CZK" class="ui button nativeBtn" symbol=" Kč">Czech Koruna</div>
+    <div id="nativeBtn-SEK" class="ui button nativeBtn" symbol=" kr">Swedish Krona</div>
+    <div id="nativeBtn-EUR" class="ui button nativeBtn" symbol="€">Euro</div>
+    <div id="nativeBtn-CHF" class="ui button nativeBtn" symbol=" Fr.">Swiss Franc</div>
+    <div id="nativeBtn-MXN" class="ui button nativeBtn" symbol="$">Mexican Peso</div>
+    <div id="nativeBtn-GBP" class="ui button nativeBtn" symbol="£">British Pound</div>
+    <div id="nativeBtn-RUB" class="ui button nativeBtn" symbol=" ₽">Russian Ruble</div>
+    <div id="nativeBtn-JPY" class="ui button nativeBtn" symbol="¥">Japanese Yen</div>
+    <div id="nativeBtn-CNY" class="ui button nativeBtn" symbol="¥">Chinese Yuan</div>
+    <div id="nativeBtn-PLN" class="ui button nativeBtn" symbol=" zł">Polish Złoty</div>
   </div>
 
   <!-- Primary container that houses all main page elements -->
@@ -61,9 +61,9 @@
             <div id="convertedList-CNY" class="zh item" symbol="¥" flag="CN">China</div>
             <div id="convertedList-CZK" class="cs item" symbol=" Kč" flag="CZ">Czech Republic</div>
             <div id="convertedList-GBP" class="en-gb item" symbol="£" flag="GB">England</div>
-            <div id="convertedList-EUR" class="fr item" symbol="€ " flag="FR">France</div>
-            <div id="convertedList-EUR" class="de item" symbol="€ " flag="DE">Germany</div>
-            <div id="convertedList-EUR" class="it item" symbol="€ " flag="IT">Italy</div>
+            <div id="convertedList-EUR" class="fr item" symbol="€" flag="FR">France</div>
+            <div id="convertedList-EUR" class="de item" symbol="€" flag="DE">Germany</div>
+            <div id="convertedList-EUR" class="it item" symbol="€" flag="IT">Italy</div>
             <div id="convertedList-JPY" class="ja item" symbol="¥" flag="JP">Japan</div>
             <div id="convertedList-MXN" class="es item" symbol="$" flag="MX">Mexico</div>
             <div id="convertedList-PLN" class="pl item" symbol=" zł" flag="PL">Poland</div>
@@ -78,19 +78,70 @@
 
       <!-- Column that houses the large converted currency icon buttons, upon clicking these should prompt the secondary modal -->
       <div class="sixteen wide column">
-        <div id="icons">
-          <h1>Convert by Currency</h1>
-          <br>
-          <button id="currencyBtn-USD" class="en item currencyIcon" symbol="$" flag="US">US$</button>
-          <button id="currencyBtn-MXN" class="es item currencyIcon" symbol="$" flag="MX">M$</button>
-          <button id="currencyBtn-AUD" class="en-gb item currencyIcon" symbol="$" flag="AU">A$</button>
-          <button id="currencyBtn-EUR" class="fr item currencyIcon" symbol="€" flag="FR">€</button>
-          <button id="currencyBtn-GBP" class="en-gb item currencyIcon" symbol="£" flag="GB">£</button>
-          <button id="currencyBtn-JPY" class="ja item currencyIcon" symbol="¥" flag="JP">¥</button>
-          <button id="currencyBtn-CNY" class="zh item currencyIcon" symbol="¥" flag="CN">C¥</button>
-          <button id="currencyBtn-SEK" class="sv item currencyIcon" symbol=" kr" flag="SE">kr</button>
+        <h1>Convert by Currency</h1>
+      </div>
+
+      <!-- Dollar icon -->
+      <div class="five wide column">
+        <h2>$</h2>
+      </div>
+      <div class="eleven wide column">
+        <div class="row">
+          <button id="currencyBtn-USD" class="en item currencyIcon" symbol="$" flag="US">United States</button>
+        </div>
+        <div class="row">
+          <button id="currencyBtn-CAD" class="ca item currencyIcon" symbol="$" flag="CA">Canada</button>
+        </div>
+        <div class="row">
+          <button id="currencyBtn-AUD" class="en-gb item currencyIcon" symbol="$" flag="AU">Australia</button>
+        </div>
+        <div class="row">
+          <button id="currencyBtn-NZD" class="en-gb item currencyIcon" symbol="$" flag="NZ">New Zealand</button>
         </div>
       </div>
+
+      <!-- Yen icon -->
+      <div class="five wide column">
+        <h2>¥</h2>
+      </div>
+      <div class="eleven wide column">
+        <div class="row">
+          <button id="currencyBtn-JPY" class="ja item currencyIcon" symbol="¥" flag="JP">Japan</button>
+        </div>
+        <div class="row">
+          <button id="currencyBtn-CNY" class="zh item currencyIcon" symbol="¥" flag="CN">China</button>
+        </div>
+      </div>
+
+      <!-- Kronar icon -->
+      <div class="five wide column">
+        <h2>kr</h2>
+      </div>
+      <div class="eleven wide column">
+        <div class="row">
+          <button id="currencyBtn-SEK" class="sv item currencyIcon" symbol=" kr" flag="SE">Sweden</button>
+        </div>
+        <div class="row">
+          <button id="currencyBtn-NOK" class="no item currencyIcon" symbol=" kr" flag="NO">Norway</button>
+        </div>
+        <div class="row">
+          <button id="currencyBtn-ISK" class="is item currencyIcon" symbol=" kr" flag="IS">Iceland</button>
+          <div class="row">
+            <button id="currencyBtn-DKK" class="da item currencyIcon" symbol=" kr" flag="DK">Denmark</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="five wide column">
+        <button id="currencyBtn-EUR" class="fr item currencySymbol" symbol="€ " flag="FR">€</button>
+      </div>
+      <div class="five wide column">
+        <button id="currencyBtn-GBP" class="en-gb item currencySymbol" symbol="£ " flag="GB">£</button>
+      </div>
+      <div class="five wide column">
+        <button id="currencyBtn-CHF" class="de item currencySymbol" symbol=" Fr." flag="CH">Fr.</button>
+      </div>
+
 
       <!-- UI Grid closing Div -->
     </div>
@@ -115,24 +166,23 @@
       <span id="nativeCurrency">USD</span>
       <input type="number" id="checkNative">
       <i id="customArrow" class="arrow right icon"></i>
-      <span id="convertedCurrency">Euro</span>
+
       <input type="number" id="checkConverted">
+      <span id="convertedCurrency">Euro</span>
     </div>
     <button id="convertBtn" class="ui button">Convert</button>
 
     <!-- Last weeks exchange rate -->
     <div id="previousRate">
-      <span>Last Week's Rate: </span>
-    </div>
-    <div id="previousRate">
+      <div id="flagPic"></div>
+      <div id="prevStyle">
+      Last Week:
       <span class="nativeRate"></span>
       <i id="prevArrow" class="arrow right icon"></i>
       <span id="convertedPreviousRate"></span>
-      </div>
+</div>
+    </div>
 
-
-    <!-- Flag API -->
-    <div id="flagPic"></div>
 
     <!-- Secondary Modal closing tag -->
   </div>

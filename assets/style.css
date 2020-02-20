@@ -1,39 +1,43 @@
 html {
-  font-family: 'Noto', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   font-size: 35px;
 }
 
 body {
-  background: linear-gradient(to bottom right, rgb(121, 148, 184), rgb(20, 21, 22)) fixed;
-  font-family: 'Noto', sans-serif;
+  background: rgb(22, 22, 22);
 }
 
 h1 {
   font-size: 60px;
   text-align: center;
-  font-family: 'Noto', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   color: white;
 }
 
 h2 {
-  font-family: 'Noto', sans-serif;
-  font-weight: lighter;
-  text-align: center;
-  font-size: 30px;
-  color: white;
+font-family: 'Maven Pro', sans-serif;
+  font-size: 200px;
+  text-align: right;
+  padding-right: 0;
+  background: linear-gradient(to right, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h3 {
-  font-size: 60px;
+  font-size: 70px;
   text-align: center;
   font-family: 'Noto', sans-serif;
   padding: 20px;
+  background: linear-gradient(to right, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h4 {
   font-size: 30px;
   text-align: center;
-  font-family: 'Noto', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
@@ -45,7 +49,7 @@ h4 {
 }
 
 .ui.button {
-  font-family: 'Noto', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   font-size: 30px;
   display: flex;
   justify-content: center;
@@ -61,137 +65,146 @@ h4 {
 
 .ui.modal {
   background-color: rgb(204, 204, 204);
-  font-size: 40px;
-  font-family: 'Noto', sans-serif;
-  padding: 20px;
+  font-size: 50px;
+  font-family: 'Maven Pro', sans-serif;
 }
 
 .currencyIcon {
-  border-radius: 100px;
-  height: 200px;
-  width: 200px;
-  font-size: 100px;
-  font-family: 'Noto', sans-serif;
-  margin: 30px;
-  background: linear-gradient(to bottom right, rgb(255, 183, 116),  rgb(63, 50, 33));
+  border-radius: 10px;
+  font-size: 30px;
+  width: 80%;
+  font-family: 'Maven Pro', sans-serif;
+  background: linear-gradient(to right, transparent, red, blue, transparent);
   outline: none;
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
+  padding: 10px;
+  margin: 5px;
 }
 
 .currencyIcon:hover {
-  background: linear-gradient(to bottom right, rgb(255, 153, 116),  rgb(63, 20, 33));
+  background: linear-gradient(to right, green, teal);
 }
 
 .currencyIcon:focus {
-  background: linear-gradient(to bottom right, rgb(255, 255, 255),  rgb(0, 20, 33));
+  background: linear-gradient(to right, red, blue);
 }
 
+.currencySymbol {
+font-family: 'Maven Pro', sans-serif;
+  font-size: 200px;
+  background: linear-gradient(to right, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: none;
+  outline: none;
+  margin: 0;
+}
+
+.five.wide.column {
+  text-align: center;
+}
+
+/* Conversion input boxes */
 input {
-  width: 200px;
+  width: 175px;
   border-radius: 10px;
   border: none;
   outline: none;
   padding: 10px;
   margin-left: 20px;
   margin-right: 20px;
-  font-family: 'Noto', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 30px;
 }
-
 input:hover {
   outline: none;
 }
-
-#exchangeRate, #customConversion {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  margin-top: 20px;
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
+/* Secondary modal placement */
+#exchangeRate {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+#customConversion {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
 #previousRate {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 
+/* Convert button in secondray modal */
 #convertBtn {
+  height: 70px;
+  width: 180px;
+  padding: 20px;
   margin: auto;
-  margin-bottom: 45px;
-  margin-top: 30px;
+  color: white;
+  background: linear-gradient(to right, red, blue);
 }
-
 #convertBtn:hover {
-  background-color: rgb(255, 183, 116);
   color: white;
+  background: linear-gradient(to right, green, teal);
 }
-
 #convertBtn:focus {
-  background-color: rgb(63, 50, 33);
-  color: white;
-}
-
-.modalSpan {  
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: auto;
+  color: rgb(22, 22, 22);
+  background: linear-gradient(to right, red, blue);
 }
 
 .flagSize { 
-  height: 110px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  padding-left: 45px;
-  padding-top: 30px;
+  height: 64px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 #exchangeRate {
   font-size: 50px;
-  margin-bottom: 40px;
 }
 
-#arrowScale {
-  color: rgb(121, 148, 184);
-  font-size: 30px;
-}
-
-#customArrow {
-  color: rgb(121, 148, 184);
-  font-size: 40px;
-  padding-top: 13px;
-}
-
-#prevArrow {
-  color: rgb(121, 148, 184);
-  font-size: 30px;
-  padding-top: 5px;
+.arrow.right.icon {
+  background: linear-gradient(to right, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
 }
 
 #exchangeArrow {
-  color: rgb(121, 148, 184);
+  font-size: 43px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-top: 3px;
+}
+
+#prevArrow {
   font-size: 35px;
-  padding-top: 7px;
 }
 
-#convertedCurrency, #nativeCurrency {
-  font-size: 50px;
-  padding-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.nativeRate, #convertedRate, #convertedPreviousRate {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-#helloDisplay {
-  margin-bottom: 20px;
+#previousRate {
+  font-size: 40px;
 }
 
 #rateIcon {
-  font-size: 35px;
-  padding-top: 7px;
-  margin: 0;
+  font-size: 40px;
+  padding-top: 5px;
+  margin-left: 5px;
+}
+
+#prevStyle {
+  padding-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
