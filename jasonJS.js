@@ -50,7 +50,7 @@ $('#flagPic').empty()
     var countryCode = $(this).attr("flag");
     var flags = "<img class= 'flagSize' src=https://www.countryflags.io/" + countryCode + "/flat/64.png>"
 
-    $('#flagPic').append(flags);
+    $('#flagPic').prepend(flags);
 }); 
 
 
