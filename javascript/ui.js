@@ -6,7 +6,7 @@ let lastWeekConvertedRate;
 let nativeSymbol;
 let convertedSymbol;
 const lastWeek = moment().subtract(7, 'days').format('YYYY-MM-DD');
-const rightSideSymbols = ['CZK', 'PLN', 'CHF', 'RUB', 'MXN']
+const rightSideSymbols = ['CZK', 'PLN', 'CHF', 'RUB', 'MXN', 'SEK']
 
 // Initial displays
 $('.ui.dropdown').dropdown();
@@ -93,4 +93,3 @@ function placeCurrencySymbol(targetedEl, currencyType, amount, symbol){
     $(targetedEl).text(symbol + amount);
   }
 }
-
