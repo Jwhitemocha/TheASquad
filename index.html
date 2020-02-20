@@ -49,9 +49,11 @@
           <div class="menu">
 
             <div id="convertedList-CAD" class="ca item" symbol="$ " flag="CA">Canada</div>
-            <div id="convertedList-CZK" class="de item" symbol="Kč " flag="CZ">Czech Republic</div>
+            <div id="convertedList-CZK" class="cs item" symbol="Kč " flag="CZ">Czech Republic</div>
             <div id="convertedList-GBP" class="en-gb item" symbol="£ " flag="GB">England</div>
             <div id="convertedList-EUR" class="fr item" symbol="€ " flag="FR">France</div>
+            <div id="convertedList-EUR" class="de item" symbol="€ " flag="DE">Germany</div>
+            <div id="convertedList-EUR" class="it item" symbol="€ " flag="IT">Italy</div>
             <div id="convertedList-JPY" class="ja item" symbol="¥ " flag="JP">Japan</div>
             <div id="convertedList-MXN" class="es item" symbol="$ " flag="MX">Mexico</div>
             <div id="convertedList-PLN" class="pl item" symbol="zł " flag="PL">Poland</div>
@@ -82,7 +84,10 @@
 
   <!-- Secondary modal that appears when a currency icon is clicked -->
   <div id="convertedModal" class="ui modal">
-    <h3 id="displayConverted"></h3>
+        <!-- Flag API display -->
+
+<div id="flagPic"></div>
+<h3 id="displayConverted"></h3>
 
     <!-- Basic 1.1 exchange rate information -->
     <div id="exchangeRate">
@@ -108,9 +113,6 @@
       <h4>=></h4>
       <span id="convertedPreviousRate" class="modalSpan"></span>
     </div>
-
-    <!-- Flag API display -->
-    <div id="flagPic"></div>
 
     <!-- Secondary Modal closing tag -->
   </div>
