@@ -48,40 +48,35 @@
         <div id="displayNative" class="ui button">Select currency</div>
       </div>
 
-      <!-- Column that houses a drop down menu with all available countries, should the user choose to locate the desired currency via country versus currency symbol -->
-      <div class="sixteen wide column">
-        <h1>Convert by Country</h1>
-        <br>
-        <div class="ui button dropdown">
-          <span class="text">Select Country</span>
-          <div class="menu">
-
-            <div id="convertedList-AUD" class="en-gb item" symbol="$" flag="AU">Australia</div>
-            <div id="convertedList-CAD" class="ca item" symbol="$" flag="CA">Canada</div>
-            <div id="convertedList-CNY" class="zh item" symbol="¥" flag="CN">China</div>
-            <div id="convertedList-CZK" class="cs item" symbol="Kč" flag="CZ">Czech Republic</div>
-            <div id="convertedList-DKK" class="da item" symbol="kr" flag="DK">Denmark</div>
-            <div id="convertedList-GBP" class="en-gb item" symbol="£" flag="GB">England</div>
-            <div id="convertedList-EUR" class="fr item" symbol="€" flag="FR">France</div>
-            <div id="convertedList-EUR" class="de item" symbol="€" flag="DE">Germany</div>
-            <div id="convertedList-ISK" class="is item" symbol="kr" flag="IS">Iceland</div>
-            <div id="convertedList-EUR" class="it item" symbol="€" flag="IT">Italy</div>
-            <div id="convertedList-JPY" class="ja item" symbol="¥" flag="JP">Japan</div>
-            <div id="convertedList-MXN" class="es item" symbol="$" flag="MX">Mexico</div>
-            <div id="convertedList-NOK" class="no item" symbol="kr" flag="NO">Norway</div>
-            <div id="convertedList-PLN" class="pl item" symbol="zł" flag="PL">Poland</div>
-            <div id="convertedList-RUB" class="ru item" symbol="₽" flag="RU">Russia</div>
-            <div id="convertedList-SEK" class="sv item" symbol="kr" flag="SV">Sweden</div>
-            <div id="convertedList-CHF" class="de item" symbol="Fr." flag="CH">Switzerland</div>
-            <div id="convertedList-USD" class="en item" symbol="$" flag="US">United States</div>
-
-          </div>
-        </div>
-      </div>
-
       <!-- Column that houses the large converted currency icon buttons, upon clicking these should prompt the secondary modal -->
       <div class="sixteen wide column">
         <h1>Convert by Currency</h1>
+      </div>
+
+      <!-- Pound icon -->
+      <div class="five wide column">
+        <h2>£</h2>
+      </div>
+      <div class="eleven wide column">
+        <div class="row">
+          <button id="currencyBtn-GBP" class="en-gb item currencyIcon" symbol="£" flag="GB">United Kingdom</button>
+        </div>
+      </div>
+
+      <!-- Euro icon -->
+      <div class="five wide column">
+        <h2>€</h2>
+      </div>
+      <div class="eleven wide column">
+        <div class="row">
+          <button id="currencyBtn-EUR" class="fr item currencyIcon" symbol="€" flag="FR">France</button>
+        </div>
+        <div class="row">
+          <button id="currencyBtn-EUR" class="de item currencyIcon" symbol="€" flag="DE">Germany</button>
+        </div>
+        <div class="row">
+          <button id="currencyBtn-EUR" class="it item currencyIcon" symbol="€" flag="IT">Italy</button>
+        </div>
       </div>
 
       <!-- Dollar icon -->
@@ -89,6 +84,7 @@
         <h2>$</h2>
       </div>
       <div class="eleven wide column">
+
         <div class="row">
           <button id="currencyBtn-AUD" class="en-gb item currencyIcon" symbol="$" flag="AU">Australia</button>
         </div>
@@ -96,11 +92,18 @@
           <button id="currencyBtn-CAD" class="ca item currencyIcon" symbol="$" flag="CA">Canada</button>
         </div>
         <div class="row">
+          <button id="currencyBtn-HKD" class="zh item currencyIcon" symbol="HK$" flag="HK">Hong Kong</button>
+        </div>
+        <div class="row">
           <button id="currencyBtn-NZD" class="en-gb item currencyIcon" symbol="$" flag="NZ">New Zealand</button>
+        </div>
+        <div class="row">
+          <button id="currencyBtn-SGD" class="ms item currencyIcon" symbol="$" flag="SG">Singapore</button>
         </div>
         <div class="row">
           <button id="currencyBtn-USD" class="en item currencyIcon" symbol="$" flag="US">United States</button>
         </div>
+
       </div>
 
       <!-- Yen icon -->
@@ -135,22 +138,35 @@
         </div>
       </div>
 
-      <!-- Euro icon -->
-      <div class="five wide column">
-        <h2>€</h2>
-      </div>
-      <div class="eleven wide column">
-        <div class="row">
-          <button id="currencyBtn-EUR" class="fr item currencyIcon" symbol="€" flag="FR">France</button>
-        </div>
-        <div class="row">
-          <button id="currencyBtn-EUR" class="de item currencyIcon" symbol="€" flag="DE">Germany</button>
-        </div>
-        <div class="row">
-          <button id="currencyBtn-EUR" class="it item currencyIcon" symbol="€" flag="IT">Italy</button>
-        </div>
-      </div>
 
+
+      <!-- Column that houses a drop down menu with all available countries, should the user choose to locate the desired currency via country versus currency symbol -->
+      <div class="sixteen wide column">
+        <h1>Additional Countries</h1>
+        <br>
+        <div class="ui button dropdown">
+          <span class="text">Select Country</span>
+          <div class="menu">
+
+            <div id="convertedList-BRL" class="pt item" symbol="R$" flag="BR">Brazil</div>
+            <div id="convertedList-BGN" class="bg item" symbol="Лв." flag="BG">Bulgaria</div>
+            <div id="convertedList-HRK" class="hr item" symbol="kn" flag="HR">Croatia</div>
+            <div id="convertedList-CZK" class="cs item" symbol="Kč" flag="CZ">Czech Republic</div>
+            <div id="convertedList-MYR" class="ms item" symbol="RM" flag="MY">Malaysia</div>
+            <div id="convertedList-MXN" class="es item" symbol="$" flag="MX">Mexico</div>
+            <div id="convertedList-PHP" class="fil item" symbol="₱" flag="PH">Philippines</div>
+            <div id="convertedList-PLN" class="pl item" symbol="zł" flag="PL">Poland</div>
+            <div id="convertedList-RON" class="ro item" symbol=" lei" flag="RO">Romania</div>
+            <div id="convertedList-RUB" class="ru item" symbol="₽" flag="RU">Russia</div>
+            <div id="convertedList-ZAR" class="af item" symbol="R" flag="ZA">South Africa</div>
+            <div id="convertedList-KRW" class="ka item" symbol="₩" flag="KR">South Korea</div>
+            <div id="convertedList-CHF" class="de item" symbol="Fr." flag="CH">Switzerland</div>
+            <div id="convertedList-THB" class="th item" symbol="฿" flag="TH">Thailand</div>
+            <div id="convertedList-TRY" class="tk item" symbol="₺" flag="TR">Turkey</div>
+
+          </div>
+        </div>
+      </div>
 
       <!-- UI Grid closing Div -->
     </div>
@@ -191,7 +207,6 @@
         <span id="convertedPreviousRate"></span>
       </div>
     </div>
-
 
     <!-- Secondary Modal closing tag -->
   </div>

@@ -49,6 +49,21 @@ $(".item").click(function() {
         $('#helloDisplay').html(icelandicHello); 
     };
     
+    const portugueseHello = "Olá"; 
+    if (response.hello === "Ol&aacute;") { 
+        $('#helloDisplay').html(portugueseHello); 
+    };
+
+    const thaiHello = "สวัสดี (S̄wạs̄dī)"; 
+    if (response.hello === "&#3626;&#3623;&#3633;&#3626;&#3604;&#3637;") { 
+        $('#helloDisplay').html(thaiHello); 
+    };
+
+    const koreanHello = "여보세요 (yeoboseyo)"; 
+    if (response.hello === "&#4306;&#4304;&#4315;&#4304;&#4320;&#4335;&#4317;&#4305;&#4304;") { 
+        $('#helloDisplay').html(koreanHello); 
+    };
+
 });
 });
 
