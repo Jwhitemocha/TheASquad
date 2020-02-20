@@ -16,27 +16,27 @@ $(".item").click(function() {
         
 // Displaying 'Hello' based on Country Clicked 
 
-    $('#displayConverted').text(response.hello);
+    $('#helloDisplay').text(response.hello);
 
 // GET JAPANESE CHARACTERS & DISPLAY PROPER CHARACTERS      
     var japaneseHello = "こんにちは (Kon'nichiwa)"; 
     if (response.hello === "&#12371;&#12435;&#12395;&#12385;&#12399;") { 
-        $('#displayConverted').html(japaneseHello); 
+        $('#helloDisplay').html(japaneseHello); 
     };
 
     var polishHello = "Cześć";
     if (response.hello === "Cze&#347;&#263;") { 
-        $('#displayConverted').html(polishHello);
+        $('#helloDisplay').html(polishHello);
     };
 
     var russianHello = "Здравствуйте (Zdravstvuyte)";
     if (response.hello === "&#1087;&#1088;&#1080;&#1074;&#1077;&#1090;") { 
-        $('#displayConverted').html(russianHello);
+        $('#helloDisplay').html(russianHello);
     };
 
     var italianHello = "Ciao"; 
     if (response.hello === "Ci&agrave;o") { 
-        $('#displayConverted').html(italianHello); 
+        $('#helloDisplay').html(italianHello); 
     };
     
 });
