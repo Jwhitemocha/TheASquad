@@ -30,9 +30,14 @@ $(".item").click(function() {
     if (response.hello === "Cze&#347;&#263;") { 
         $('#displayConverted').html(polishHello);
     };
-});
-});
 
+    var russianHello = "Здравствуйте (Zdravstvuyte)";
+
+    if (response.hello === "&#1087;&#1088;&#1080;&#1074;&#1077;&#1090;") { 
+        $('#displayConverted').html(russianHello);
+    };
+});
+});
 
 // Countryflag.io API (for flag) "JP" = JAPAN || "FR" = FRANCE  || "US" = USA  || "GB" = UNITED KINGDOM
 
