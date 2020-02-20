@@ -54,13 +54,20 @@ function rateExchange(){
           convertedRate = 1
         }
         placeCurrencySymbol('#convertedRate', convertedCurrency, convertedRate, convertedSymbol);
-
+        
         $('#convertBtn').click(function(){
           let convertedInput = roundedToTwoDec($('#checkNative').val() * response.rates[convertedCurrency]);
           $('#checkConverted').val(convertedInput);
         })
         lastWeekConvertedRate = roundedToTwoDec(response2.rates[convertedCurrency])
         placeCurrencySymbol('#convertedPreviousRate', convertedCurrency, lastWeekConvertedRate, convertedSymbol);
+
+        $('#rateIcon').removeClass();
+        if(response.rates[convertedCurrency] > response2.rates[convertedCurrency]){
+          $('#rateIcon').addClass("green caret up icon");
+        } else if(response.rates[convertedCurrency] < response2.rates[convertedCurrency]){
+          $('#rateIcon').addClass("red caret down icon");
+        }
       })
   })
 }
