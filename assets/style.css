@@ -3,12 +3,12 @@ html {
   font-size: 35px;
 }
 body {
-  background: rgb(22, 22, 22);
+  background: rgb(30, 30, 30);
 }
 
 /* Main page header style */
 h1 {
-  font-size: 60px;
+  font-size: 90px;
   text-align: center;
   font-family: 'Maven Pro', sans-serif;
   color: white;
@@ -20,7 +20,7 @@ font-family: 'Maven Pro', sans-serif;
   font-size: 200px;
   text-align: right;
   padding-right: 0;
-  background: linear-gradient(to right, red, blue);
+  background: linear-gradient(to bottom right, rgb(210, 0, 255), rgb(145, 110, 200));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -31,7 +31,7 @@ h3 {
   text-align: center;
   font-family: 'Noto', sans-serif;
   padding: 20px;
-  background: linear-gradient(to right, red, blue);
+  background: linear-gradient(to bottom right, rgb(210, 0, 255), rgb(145, 110, 200));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -45,35 +45,36 @@ h3 {
   margin: 20px;
   margin-left: 150px;
   margin-right: 150px;
-  background: linear-gradient(to right, red, blue);
+  background: linear-gradient(to bottom right, rgb(210, 0, 255), rgb(145, 110, 200));
   color: white;
 }
 .ui.button:hover {
-  background: linear-gradient(to right, green, teal);
+  background: linear-gradient(to bottom right, rgb(160, 0, 255), rgb(95, 110, 200));
   color: white;
 }
 .ui.button:focus {
-  background: linear-gradient(to right, red, blue);
+  background: linear-gradient(to bottom right, rgb(210, 0, 255), rgb(145, 110, 200));
   color: rgb(255, 255, 255);
 }
 .ui.active.button {
-  background: linear-gradient(to right, red, blue);
+  background: linear-gradient(to bottom right, rgb(210, 0, 255), rgb(145, 110, 200));
   color: rgb(255, 255, 255);
 }
-
-.ui.upward.dropdown.button:not(.pointing):not(.floating).active{
-  background: linear-gradient(to right, red, blue);
+.ui.active.button:hover {
+  background: linear-gradient(to bottom right, rgb(160, 0, 255), rgb(95, 110, 200));
   color: rgb(255, 255, 255);
-  border-bottom-left-radius: 0.285714rem;
-  border-bottom-right-radius: 0.285714rem;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
+  border-radius: 0.285714rem;
+}
+.ui.upward.dropdown.button:not(.pointing):not(.floating).active {
+  background: linear-gradient(to bottom right, rgb(210, 0, 255), rgb(145, 110, 200));
+  color: rgb(255, 255, 255);
+  border-radius: 0.285714rem;
 }
 .ui.container {
   margin: 70px;
 }
 .ui.modal {
-  background-color: rgb(204, 204, 204);
+  background: linear-gradient(to bottom, rgb(165, 165, 165), rgb(210, 210, 210));
   font-size: 50px;
   font-family: 'Maven Pro', sans-serif;
 }
@@ -84,7 +85,7 @@ h3 {
   font-size: 30px;
   width: 80%;
   font-family: 'Maven Pro', sans-serif;
-  background: linear-gradient(to right, red, blue);
+  background: linear-gradient(to bottom right, rgb(210, 0, 255), rgb(145, 110, 200));
   outline: none;
   color: rgb(255, 255, 255);
   border: none;
@@ -92,11 +93,11 @@ h3 {
   margin: 5px;
 }
 .currencyIcon:hover {
-  background: linear-gradient(to right, green, teal);
+  background: linear-gradient(to bottom right, rgb(160, 0, 255), rgb(95, 110, 200));
   color: rgb(255, 255, 255);
 }
 .currencyIcon:focus {
-  background: linear-gradient(to right, red, blue);
+  background: linear-gradient(to bottom right, rgb(210, 0, 255), rgb(145, 110, 200));
   color: rgb(255, 255, 255);
 }
 
@@ -128,18 +129,18 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 20px;
   margin: auto;
   color: white;
-  background: linear-gradient(to right, red, blue);
+  background: linear-gradient(to bottom right, rgb(210, 0, 255), rgb(145, 110, 200));
 }
 #convertBtn:hover {
   color: white;
-  background: linear-gradient(to right, green, teal);
+  background: linear-gradient(to bottom right, rgb(160, 0, 255), rgb(95, 110, 200));
 }
 #convertBtn:focus {
   color: rgb(255, 255, 255);
-  background: linear-gradient(to right, red, blue);
+  background: linear-gradient(to bottom right, rgb(210, 0, 255), rgb(145, 110, 200));
 }
 
-/* Flag style */
+/* Flag scale */
 .flagSize { 
   height: 64px;
   margin-right: 20px;
@@ -148,7 +149,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* Icon styling for arrows and rate chalet */
 .arrow.right.icon {
-  background: linear-gradient(to right, red, blue);
+  background: linear-gradient(to bottom right, rgb(210, 0, 255), rgb(145, 110, 200));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0;
