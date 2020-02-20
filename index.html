@@ -24,14 +24,14 @@
     <!-- Buttons to choose native currency in initial modal -->
     <div id="nativeBtn-USD" class="ui button nativeBtn" symbol="$">American Dollar</div>
     <div id="nativeBtn-CAD" class="ui button nativeBtn" symbol="$">Canadian Dollar</div>
-    <div id="nativeBtn-CZK" class="ui button nativeBtn" symbol="Kč">Koruna</div>
-    <div id="nativeBtn-EUR" class="ui button nativeBtn" symbol="€">Euro</div>
-    <div id="nativeBtn-CHF" class="ui button nativeBtn" symbol="Fr.">Franc</div>
+    <div id="nativeBtn-CZK" class="ui button nativeBtn" symbol=" Kč">Koruna</div>
+    <div id="nativeBtn-EUR" class="ui button nativeBtn" symbol="€ ">Euro</div>
+    <div id="nativeBtn-CHF" class="ui button nativeBtn" symbol=" Fr.">Franc</div>
     <div id="nativeBtn-MXN" class="ui button nativeBtn" symbol="$">Pesos</div>
     <div id="nativeBtn-GBP" class="ui button nativeBtn" symbol="£">Pound</div>
-    <div id="nativeBtn-RUB" class="ui button nativeBtn" symbol="₽">Ruble</div>
+    <div id="nativeBtn-RUB" class="ui button nativeBtn" symbol=" ₽">Ruble</div>
     <div id="nativeBtn-JPY" class="ui button nativeBtn" symbol="¥">Yen</div>
-    <div id="nativeBtn-PLN" class="ui button nativeBtn" symbol="zł">Złoty</div>
+    <div id="nativeBtn-PLN" class="ui button nativeBtn" symbol=" zł">Złoty</div>
   </div>
 
   <!-- Primary container that houses all main page elements -->
@@ -54,19 +54,19 @@
           <span class="text">Select Country</span>
           <div class="menu">
 
-            <div id="convertedList-AUD" class="en-gb item" symbol=" $ " flag="AU">Australia</div>
-            <div id="convertedList-CAD" class="ca item" symbol=" $ " flag="CA">Canada</div>
-            <div id="convertedList-CZK" class="cs item" symbol=" Kč " flag="CZ">Czech Republic</div>
-            <div id="convertedList-GBP" class="en-gb item" symbol=" £ " flag="GB">England</div>
-            <div id="convertedList-EUR" class="fr item" symbol=" € " flag="FR">France</div>
-            <div id="convertedList-EUR" class="de item" symbol=" € " flag="DE">Germany</div>
-            <div id="convertedList-EUR" class="it item" symbol=" € " flag="IT">Italy</div>
-            <div id="convertedList-JPY" class="ja item" symbol=" ¥ " flag="JP">Japan</div>
-            <div id="convertedList-MXN" class="es item" symbol=" $ " flag="MX">Mexico</div>
-            <div id="convertedList-PLN" class="pl item" symbol=" zł " flag="PL">Poland</div>
-            <div id="convertedList-RUB" class="ru item" symbol=" ₽ " flag="RU">Russia</div>
-            <div id="convertedList-CHF" class="de item" symbol=" Fr. " flag="CH">Switzerland</div>
-            <div id="convertedList-USD" class="en item" symbol=" $ " flag="US">United States</div>
+            <div id="convertedList-AUD" class="en-gb item" symbol="$" flag="AU">Australia</div>
+            <div id="convertedList-CAD" class="ca item" symbol="$" flag="CA">Canada</div>
+            <div id="convertedList-CZK" class="cs item" symbol=" Kč" flag="CZ">Czech Republic</div>
+            <div id="convertedList-GBP" class="en-gb item" symbol="£" flag="GB">England</div>
+            <div id="convertedList-EUR" class="fr item" symbol="€ " flag="FR">France</div>
+            <div id="convertedList-EUR" class="de item" symbol="€ " flag="DE">Germany</div>
+            <div id="convertedList-EUR" class="it item" symbol="€ " flag="IT">Italy</div>
+            <div id="convertedList-JPY" class="ja item" symbol="¥" flag="JP">Japan</div>
+            <div id="convertedList-MXN" class="es item" symbol="$" flag="MX">Mexico</div>
+            <div id="convertedList-PLN" class="pl item" symbol=" zł" flag="PL">Poland</div>
+            <div id="convertedList-RUB" class="ru item" symbol=" ₽" flag="RU">Russia</div>
+            <div id="convertedList-CHF" class="de item" symbol=" Fr." flag="CH">Switzerland</div>
+            <div id="convertedList-USD" class="en item" symbol="$" flag="US">United States</div>
 
           </div>
         </div>
@@ -99,28 +99,31 @@
 
     <!-- Basic 1.1 exchange rate information -->
     <div id="exchangeRate">
-      <span class=" nativeRate"></span>
-      <i class="arrow right icon"></i>
+      <span class="nativeRate"></span>
+      <i id="exchangeArrow" class="arrow right icon"></i>
       <span id="convertedRate"></span><i id="rateIcon"></i>
     </div>
 
     <!-- Custom number amount rate conversion -->
     <div id="customConversion">
-      <span id="nativeCurrency" class="modalSpan">USD</span>
+      <span id="nativeCurrency">USD</span>
       <input type="number" id="checkNative">
-      <i class="arrow right icon modalSpan"></i>
-      <span id="convertedCurrency" class="modalSpan">Euro</span>
+      <i id="customArrow" class="arrow right icon"></i>
+      <span id="convertedCurrency">Euro</span>
       <input type="number" id="checkConverted">
     </div>
     <button id="convertBtn" class="ui button">Convert</button>
 
     <!-- Last weeks exchange rate -->
     <div id="previousRate">
-      <span>Last Week's Rate:</span>
-      <span class="nativeRate"></span>
-      <i class="arrow right icon"></i>
-      <span id="convertedPreviousRate"></span>
+      <span>Last Week's Rate: </span>
     </div>
+    <div id="previousRate">
+      <span class="nativeRate"></span>
+      <i id="prevArrow" class="arrow right icon"></i>
+      <span id="convertedPreviousRate"></span>
+      </div>
+
 
     <!-- Flag API -->
     <div id="flagPic"></div>
