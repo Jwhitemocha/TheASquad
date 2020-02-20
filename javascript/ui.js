@@ -5,6 +5,7 @@ let lastWeekConvertedRate;
 let nativeSymbol;
 let convertedSymbol;
 const lastWeek = moment().subtract(7, 'days').format('YYYY-MM-DD');
+const rightSideSymbols = ['CZK', 'PLN', 'CHF', 'RUB', 'MXN']
 
 $('.ui.dropdown').dropdown();
 
@@ -20,7 +21,7 @@ $('.nativeBtn').click(function(){
   nativeCurrency = $(this).attr('id').slice(-3);
   nativeSymbol = $(this).attr('symbol');
   $('#displayNative').text(nativeCurrency);
-  $(".nativeRate").text(nativeSymbol + 1);
+  placeCurrencySymbol('.nativeRate', nativeCurrency, 1, nativeSymbol);
   $('#nativeModal').modal('hide');
 })
 
@@ -52,15 +53,14 @@ function rateExchange(){
         if(nativeCurrency === convertedCurrency){
           convertedRate = 1
         }
-        $('#convertedRate').text(convertedSymbol + convertedRate);
+        placeCurrencySymbol('#convertedRate', convertedCurrency, convertedRate, convertedSymbol);
 
         $('#convertBtn').click(function(){
           let convertedInput = roundedToTwoDec($('#checkNative').val() * response.rates[convertedCurrency]);
           $('#checkConverted').val(convertedInput);
         })
-        console.log(response2);
         lastWeekConvertedRate = roundedToTwoDec(response2.rates[convertedCurrency])
-        $('#convertedPreviousRate').text(convertedSymbol + lastWeekConvertedRate);
+        placeCurrencySymbol('#convertedPreviousRate', convertedCurrency, lastWeekConvertedRate, convertedSymbol);
       })
   })
 }
@@ -69,4 +69,12 @@ function roundedToTwoDec(number){
   return Math.round(number * 100) / 100;
 }
 
+function placeCurrencySymbol(targetedEl, currencyType, amount, symbol){
+  if(rightSideSymbols.includes(currencyType)){
+    $(targetedEl).text(amount + symbol);
+  }
+  else{
+    $(targetedEl).text(symbol + amount);
+  }
+}
 
