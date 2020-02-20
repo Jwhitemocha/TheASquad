@@ -6,7 +6,7 @@ let lastWeekConvertedRate;
 let nativeSymbol;
 let convertedSymbol;
 const lastWeek = moment().subtract(7, 'days').format('YYYY-MM-DD');
-const rightSideSymbols = ['CZK', 'PLN', 'CHF', 'RUB', 'MXN', 'SEK', 'ISK', 'DKK', 'NOK', 'RON', 'HUF', 'BGN', 'HRK']
+const rightSideSymbols = ['CZK', 'PLN', 'CHF', 'RUB', 'MXN', 'SEK', 'ISK', 'DKK', 'NOK', 'RON', 'HUF', 'BGN', 'HRK'];
 
 // Initial displays
 $('.ui.dropdown').dropdown();
