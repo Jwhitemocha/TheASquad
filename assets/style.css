@@ -112,8 +112,7 @@ input:hover {
   margin: auto;
 }
 
-.modalSpan {
-  padding-top: 10px;
+.modalSpan {  
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -130,4 +129,13 @@ input:hover {
 
 #exchangeRate {
   font-size: 50px;
+}
+
+i {
+color: rgb(121, 148, 184);
+}
+
+.modalSpan {
+  font-size: 50px;
+  padding-top: 10px;
 }
