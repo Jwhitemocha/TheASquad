@@ -24,7 +24,7 @@ h2 {
 }
 
 h3 {
-  font-size: 50px;
+  font-size: 60px;
   text-align: center;
   font-family: 'Noto', sans-serif;
   padding: 20px;
@@ -63,13 +63,14 @@ h4 {
   background-color: rgb(204, 204, 204);
   font-size: 40px;
   font-family: 'Noto', sans-serif;
+  padding: 20px;
 }
 
 .currencyIcon {
   border-radius: 100px;
   height: 200px;
   width: 200px;
-  font-size: 150px;
+  font-size: 100px;
   font-family: 'Noto', sans-serif;
   margin: 30px;
   background: linear-gradient(to bottom right, rgb(255, 183, 116),  rgb(63, 50, 33));
@@ -101,15 +102,33 @@ input:hover {
   outline: none;
 }
 
-#exchangeRate, #customConversion, #previousRate {
+#exchangeRate, #customConversion {
   display: flex;
   justify-content: center;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#previousRate {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 #convertBtn {
   margin: auto;
+  margin-bottom: 45px;
+  margin-top: 30px;
+}
+
+#convertBtn:hover {
+  background-color: rgb(255, 183, 116);
+  color: white;
+}
+
+#convertBtn:focus {
+  background-color: rgb(63, 50, 33);
+  color: white;
 }
 
 .modalSpan {  
@@ -118,24 +137,61 @@ input:hover {
 }
 
 .flagSize { 
-  height: 80px;
+  height: 110px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
-  padding-left: 17px;
-  padding-top: 10px;
+  padding-left: 45px;
+  padding-top: 30px;
 }
 
 #exchangeRate {
   font-size: 50px;
+  margin-bottom: 40px;
 }
 
-i {
-color: rgb(121, 148, 184);
+#arrowScale {
+  color: rgb(121, 148, 184);
+  font-size: 30px;
 }
 
-.modalSpan {
+#customArrow {
+  color: rgb(121, 148, 184);
+  font-size: 40px;
+  padding-top: 13px;
+}
+
+#prevArrow {
+  color: rgb(121, 148, 184);
+  font-size: 30px;
+  padding-top: 5px;
+}
+
+#exchangeArrow {
+  color: rgb(121, 148, 184);
+  font-size: 35px;
+  padding-top: 7px;
+}
+
+#convertedCurrency, #nativeCurrency {
   font-size: 50px;
   padding-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.nativeRate, #convertedRate, #convertedPreviousRate {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#helloDisplay {
+  margin-bottom: 20px;
+}
+
+#rateIcon {
+  font-size: 35px;
+  padding-top: 7px;
+  margin: 0;
 }
