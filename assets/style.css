@@ -1,5 +1,5 @@
 html {
-  font-family: 'Noto', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   font-size: 35px;
 }
 
@@ -19,17 +19,17 @@ font-family: 'Maven Pro', sans-serif;
   font-size: 200px;
   text-align: right;
   padding-right: 0;
-  background: linear-gradient(to right, rgb(255, 116, 174),  rgb(112, 69, 141));
+  background: linear-gradient(to right, red, blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 h3 {
-  font-size: 50px;
+  font-size: 70px;
   text-align: center;
   font-family: 'Noto', sans-serif;
   padding: 20px;
-  background: linear-gradient(to bottom right, #da68a6,  #4e2453);
+  background: linear-gradient(to right, red, blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -65,9 +65,8 @@ h4 {
 
 .ui.modal {
   background-color: rgb(204, 204, 204);
-  font-size: 40px;
+  font-size: 50px;
   font-family: 'Maven Pro', sans-serif;
-  position: relative;
 }
 
 .currencyIcon {
@@ -75,7 +74,7 @@ h4 {
   font-size: 30px;
   width: 80%;
   font-family: 'Maven Pro', sans-serif;
-  background: linear-gradient(to right, #b35a98,  #623e7b);
+  background: linear-gradient(to right, transparent, red, blue, transparent);
   outline: none;
   color: rgb(255, 255, 255);
   border: none;
@@ -84,17 +83,17 @@ h4 {
 }
 
 .currencyIcon:hover {
-  background: linear-gradient(to bottom right, rgb(151, 177, 194),  rgb(80, 57, 180));
+  background: linear-gradient(to right, green, teal);
 }
 
 .currencyIcon:focus {
-  background: linear-gradient(to bottom right, rgb(255, 255, 255),  rgb(0, 20, 33));
+  background: linear-gradient(to right, red, blue);
 }
 
 .currencySymbol {
 font-family: 'Maven Pro', sans-serif;
   font-size: 200px;
-  background: linear-gradient(to right, rgb(255, 116, 174),  rgb(112, 69, 141));
+  background: linear-gradient(to right, red, blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border: none;
@@ -108,14 +107,15 @@ font-family: 'Maven Pro', sans-serif;
 
 /* Conversion input boxes */
 input {
-  width: 200px;
+  width: 175px;
   border-radius: 10px;
   border: none;
   outline: none;
   padding: 10px;
   margin-left: 20px;
   margin-right: 20px;
-  font-family: 'Noto', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 30px;
 }
 input:hover {
   outline: none;
@@ -126,10 +126,23 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-#exchangeRate, #customConversion, #previousRate {
+/* Secondary modal placement */
+#exchangeRate {
   display: flex;
   justify-content: center;
   margin-top: 25px;
+  margin-bottom: 50px;
+}
+#customConversion {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+#previousRate {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
   margin-bottom: 25px;
 }
 
@@ -140,26 +153,22 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 20px;
   margin: auto;
   color: white;
-  background: linear-gradient(to right, rgb(255, 116, 174),  rgb(112, 69, 141));
+  background: linear-gradient(to right, red, blue);
 }
 #convertBtn:hover {
   color: white;
-  background: linear-gradient(to right, rgb(116, 176, 255),  rgb(69, 74, 141));
+  background: linear-gradient(to right, green, teal);
 }
 #convertBtn:focus {
   margin: auto;
   color: rgb(22, 22, 22);
-  background: linear-gradient(to right, rgb(255, 255, 255),  rgb(70, 70, 70));
+  background: linear-gradient(to right, red, blue);
 }
 
 .flagSize { 
-  height: 80px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  padding-left: 17px;
-  padding-top: 10px;
+  height: 64px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 #exchangeRate {
@@ -167,13 +176,34 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .arrow.right.icon {
-  background: linear-gradient(to right, rgb(255, 116, 174),  rgb(112, 69, 141));
+  background: linear-gradient(to right, red, blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin: 0;
 }
 
-.modalSpan {
-  font-size: 50px;
+#exchangeArrow {
+  font-size: 43px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-top: 3px;
+}
+
+#prevArrow {
+  font-size: 35px;
+}
+
+#previousRate {
+  font-size: 40px;
+}
+
+#rateIcon {
+  font-size: 40px;
+  padding-top: 5px;
+  margin-left: 5px;
+}
+
+#prevStyle {
   padding-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
