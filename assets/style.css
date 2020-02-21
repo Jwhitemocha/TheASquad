@@ -88,11 +88,13 @@ h4 {
 }
 .ui.container {
   margin-top: 60px;
+  margin-bottom: 60px;
 }
 .ui.modal {
-  background: linear-gradient(to bottom, rgb(173, 173, 173), rgb(210, 210, 210));
+  background: linear-gradient(to bottom, rgb(220, 220, 220), rgb(175, 175, 175));
   font-size: 50px;
   font-family: 'Montserrat', sans-serif;
+  border-radius: 20px;
 }
 
 /* Currency icon location name buttons */
