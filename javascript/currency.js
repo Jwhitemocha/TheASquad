@@ -47,10 +47,12 @@ function rateExchange(){
       url: lastWeekUrl,
       method: "GET"
     }).then(function(response2){
-        // Shows modal with corresponding text
-        $('#convertedModal').modal('show');
-        $('#nativeCurrency').text(nativeCurrency);
-        $('#convertedCurrency').text(convertedCurrency);
+      // Shows modal with corresponding text
+      $('#convertedModal').modal('show');
+      $('#nativeCurrency').text(nativeCurrency);
+      $('#convertedCurrency').text(convertedCurrency);
+      $('#checkConverted').val("");
+      $('#checkNative').val("");
         
         // Gets and displays the conversion rate based on what the native currency is set two
         convertedRate = roundedToTwoDec(response.rates[convertedCurrency])
