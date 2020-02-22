@@ -18,7 +18,7 @@ A currency exchange rate app, providing live conversion rates for various countr
   - Rates API
   - Moment.js
 
-[JASON TAYLOR](https://github.com/Jwhitemocha)
+[JASON TYLER](https://github.com/Jwhitemocha)
   - JavaScript
   - jQuery
   - HelloSalut API
