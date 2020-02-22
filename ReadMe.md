@@ -1,28 +1,28 @@
 # Currency Exchange App 
 
+## Description
+
+A currency exchange rate app, providing live conversion rates for various countries based on the users own native currency. Designed with most commonly converted currencies in mind, so the user can find the information they're searching for as efficiently as possible. Basically, an app to best prepare you for your upcoming travel plans!
+
 ## Contributors
 
-[Victoria Kaszuba](https://github.com/vkaszuba)
+[VICTORIA KASZUBA](https://github.com/vkaszuba)
   - HTML
   - CSS
   - Semantic UI
   - User Interface
 
-[Marcus Young](https://github.com/DMarcusYoung)
+[MARCUS YOUNG](https://github.com/DMarcusYoung)
   - JavaScript
   - jQuery
   - Rates API
   - Moment.js
 
-[Jason Taylor](https://github.com/Jwhitemocha)
+[JASON TAYLOR](https://github.com/Jwhitemocha)
   - JavaScript
   - jQuery
   - HelloSalut API
   - Flag API
-
-## Description
-
-A currency exchange rate app, providing live conversion rates for various countries based on the users own native currency. Designed with most commonly converted currencies in mind, so the user can find the information they're searching for as efficiently as possible. Basically, an app to best prepare you for your upcoming travel plans!
 
 ## Features
 
@@ -54,3 +54,8 @@ A currency exchange rate app, providing live conversion rates for various countr
 - [Currency Exchange Rates](http://ratesapi.io/)
 - ["Hello" Translation](https://fourtonfish.com/hellosalut/hello/)
 - [Country Flags](https://www.countryflags.io/)
+
+## Screenshots
+![Native Currency](https://github.com/Jwhitemocha/TheASquad/blob/master/images/nativeScreen.JPG)
+![Main Page](https://github.com/Jwhitemocha/TheASquad/blob/master/images/mainScreen.JPG)
+![Converted Currency](https://github.com/Jwhitemocha/TheASquad/blob/master/images/convertScreen.JPG)
